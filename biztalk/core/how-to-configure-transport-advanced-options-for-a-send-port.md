@@ -28,7 +28,7 @@ Use the BizTalk Server Administration console to configure transport advanced op
 >
 > Consider six messages: M1, M2, M3, M4, M5, and M6. M1, M3, M5 are meant for a file location F1. M2, M4, and M6 are meant for a file location F2. The ordered delivery dynamic send port makes sure that M1, M3, and M5 are ordered; and M2, M4, and M6 are ordered respectively.
 >
-> You can choose to enforce order across all outbound locations for a given transport type by changing the 'Enforce order across outbound locations' setting on the 'Transport Advanced Options' tab.
+> You can choose to enforce order across all outbound locations for a given transport type by changing the 'Enforce order across outbound locations' setting on the 'Transport Advanced Options' tab. Consider the six messages scenario above. If 'Enforce order across outbound locations' is enabled, the port will ensure that all six message M1, M2, M3, M4, M5, M6 are delivered in order. 
 
 > [!NOTE]
 > **Starting with [!INCLUDE[bts2016_md](../includes/bts2016-md.md)]**, you can enable ordered delivery for dynamic send ports, depending on the adapter type. This option is only available for the adapter types where ordered delivery is guaranteed for static send ports, such as the File adapter, or the FTP adapter.
