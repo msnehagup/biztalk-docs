@@ -243,6 +243,49 @@ BAM alerts require BAM tools to be enabled.
     |Windows group|You can keep the default group name, or enter something custom. |
     |Windows SharePoint Services Adapter Web site|Select the Web site that hosts the Windows SharePoint Service Adapter web service.|
 
+### Configure BizTalk EDI/AS2 Runtime 
+
+* Enterprise SSO, Group, and BizTalk Runtime must be configured before you configure BizTalk EDI/AS2 Runtime. 
+* BAM Tools must be enabled before configuring the EDI/AS2 Runtime Status Reporting features.
+* If you are only configuring EDI, then BAM is not required.
+
+1. Select **BizTalk EDI/AS2 Runtime**.
+2. Configure the following:
+
+    |Use this|To do this|
+    | --- | --- |
+    |Enable BizTalk EDI/AS2 Runtime on this computer| If you will use X12, EDIFACT, or AS2 protocols for business-to-business messaging, then select this option. |
+    |Enable BizTalk EDI for this BizTalk Group | Select if you use X12 or EDIFACT. |
+    | Enable BizTalk AS2 for this BizTalk Group | Select if you use AS2. |
+    | Enable BizTalk EDI/AS2 Runtime Status Reporting for this BizTalk Group | Enable the reporting user experience to provide the status of EDI interchanges and acknowledgments. |
+    |Remove BizTalk EDI, AS2 and Status Reporting functionalities from this BizTalk Group | Uninstalls and removes the reporting feature from the group. |
+
+### Configure the REST APIs
+>[NOTE]
+>Start from BizTalk Server 2016 feature pack, you can use REST APIs to manage the different artifacts in your BizTalk Server enviroments and operational data flowing through. 
+
+1. Select **REST APIs**.
+2. Configure the following:
+
+    |Use this|To do this|
+    | --- | --- |
+    |Enable BizTalk REST APIs | Check this if you want enable BizTalk REST APIs. | 
+    |Web service accounts | Specify the account used to run the IIS services. <ul><li>Management Service: REST APIs for BizTalk Server artifacts management. The default URI for **Management Service** APIs is http(s)://localhost/BizTalkManagementService. </li><li>Operational Data Service: Service providing information on the instances and messages flowing through your BizTalk Server environment. The operational data feed is the same data you get looking at Group Hub in BizTalk Server Administration.The default URI for **Operational Data service** APIs is http(s)://localhost/BizTalkOperationalDataService.</li></ul>|
+    |Windows groups | BizTalk REST APIs use Windows authentication, specify the Windows groups allowed to access the APIs here. <ul><li>Management REST APIs User Role: Specify this as an extra layer of security check or keep default, because actually windows user who *request* (not user hosting the service) to management REST APIs will take the access challenge. </li><li>Operational Data REST APIs User Role: Specify user group allowed to access.</li>|
+    |REST APIs website|Select the Web site to host the both the REST APIs. |
+
+### Configure BizTalk TMS
+
+1. Select **BizTalk TMS**.
+2. Configure the following:
+
+    |Use this|To do this|
+    | --- | --- |
+    |Enable BizTalk TMS | Check this if you want enable BizTalk TMS. | 
+    |Service accounts | Specify the account used to run TMS service.|
+
+>[NOTE]
+>TMS is recommanded to configure only on one server in a BizTalk Group.
 
 ### Apply your configuration
 
