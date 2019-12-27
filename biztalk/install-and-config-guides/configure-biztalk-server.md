@@ -243,23 +243,6 @@ BAM alerts require BAM tools to be enabled.
     |Windows group|You can keep the default group name, or enter something custom. |
     |Windows SharePoint Services Adapter Web site|Select the Web site that hosts the Windows SharePoint Service Adapter web service.|
 
-### Configure BizTalk EDI/AS2 Runtime 
-
-* Enterprise SSO, Group, and BizTalk Runtime must be configured before you configure BizTalk EDI/AS2 Runtime. 
-* BAM Tools must be enabled before configuring the EDI/AS2 Runtime Status Reporting features.
-* If you are only configuring EDI, then BAM is not required.
-
-1. Select **BizTalk EDI/AS2 Runtime**.
-2. Configure the following:
-
-    |Use this|To do this|
-    | --- | --- |
-    |Enable BizTalk EDI/AS2 Runtime on this computer| If you will use X12, EDIFACT, or AS2 protocols for business-to-business messaging, then select this option. |
-    |Enable BizTalk EDI for this BizTalk Group | Select if you use X12 or EDIFACT. |
-    | Enable BizTalk AS2 for this BizTalk Group | Select if you use AS2. |
-    | Enable BizTalk EDI/AS2 Runtime Status Reporting for this BizTalk Group | Enable the reporting user experience to provide the status of EDI interchanges and acknowledgments. |
-    |Remove BizTalk EDI, AS2 and Status Reporting functionalities from this BizTalk Group | Uninstalls and removes the reporting feature from the group. |
-
 ### Configure the REST APIs
 >[NOTE]
 >Start from BizTalk Server 2016 feature pack, you can use REST APIs to manage the different artifacts in your BizTalk Server enviroments and operational data flowing through. 
@@ -276,6 +259,9 @@ BAM alerts require BAM tools to be enabled.
 
 ### Configure BizTalk TMS
 
+>[NOTE]
+>"Enterprise Single Sign-On Service"(SSO) is major dependency for TMS, TMS should be configured on server which has SSO service running. Also TMS is recommanded to configure only on one server in a BizTalk Group.
+
 1. Select **BizTalk TMS**.
 2. Configure the following:
 
@@ -283,9 +269,6 @@ BAM alerts require BAM tools to be enabled.
     | --- | --- |
     |Enable BizTalk TMS | Check this if you want enable BizTalk TMS. | 
     |Service accounts | Specify the account used to run TMS service.|
-
->[NOTE]
->TMS is recommanded to configure only on one server in a BizTalk Group.
 
 ### Apply your configuration
 
