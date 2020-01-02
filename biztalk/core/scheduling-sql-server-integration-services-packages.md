@@ -42,7 +42,7 @@ Users create BAM views based on data stored in an online analytical processing (
 
 ### To run the Cube Update Integration Services package
 
-#### Starting BizTalk Server 2020
+#### Starting with BizTalk Server 2020
 1.  Start **SQL Server Management Studio**.
 
 2.  In the **Connect to server** dialog box, in the **Server type** drop-down list, select **Database Services**.
@@ -78,7 +78,7 @@ Users create BAM views based on data stored in an online analytical processing (
 
 ### To run the Maintaining BAM Data Integration Services package
 
-#### Starting BizTalk Server 2020
+#### Starting with BizTalk Server 2020
 1.  Start **SQL Server Management Studio**.
 
 2.  In the **Connect to server** dialog box, in the **Server type** drop-down list, select **Database Services**.
