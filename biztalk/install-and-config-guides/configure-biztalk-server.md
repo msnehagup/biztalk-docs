@@ -1,8 +1,8 @@
 ---
 title: "Configure using Basic or Custom configuration | Microsoft Docs"
 description: Steps to do a basic or custom configuration of BizTalk Server, and learn what happens with each configuration
-ms.custom: ""
-ms.date: "08/23/2018"
+ms.custom: "biztalk-2020"
+ms.date: "01/03/2020"
 ms.prod: "biztalk-server"
 
 ms.reviewer: ""
