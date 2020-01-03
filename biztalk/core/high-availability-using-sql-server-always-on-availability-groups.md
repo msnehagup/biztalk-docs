@@ -1,8 +1,8 @@
 ---
 title: High Availability using SQL Server Always On Availability Groups | Microsoft Docs
 description: Group the BizTalk Server database on different nodes to get a highly available (HA) solution using SQL Server Always On Available Groups (AG), including the system requirements and limitations. Always On AG requires Windows Server Failover Clustering (WSFC).
-ms.custom: ""
-ms.date: "07/8/2018"
+ms.custom: "biztalk-2020"
+ms.date: "01/03/2020"
 ms.prod: "biztalk-server"
 ms.reviewer: ""
 
@@ -261,8 +261,8 @@ These limitations are for BizTalk Server, SQL Server AlwaysOn Availability Group
 * Logins, SQL Agent Jobs, the SQL DB Mail profile, and accounts are not managed within Availability Groups. This requires manual modification in Jobs to make sure they run against the primary replica. 
 * SQL Server Analysis Services and SQL Server Integration Services do not participate in Availability Groups. Without this support from SQL Server, there is no HA solution for these in Azure Virtual Machines. BizTalk Server’s BAM capabilities are dependent on these services.
 
-  [!NOTE]
-  BizTalk Server 2020 supports high availability for BAM DTS packages using SSIS Catalog.
+> [!NOTE]
+>  BizTalk Server 2020 supports high availability for BAM DTS packages using SSIS Catalog.
 
 * Prior to SQL Server 2016 SP2, Availability Groups don't support MSDTC between databases on the same SQL instance. 
 
