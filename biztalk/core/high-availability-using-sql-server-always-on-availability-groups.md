@@ -65,13 +65,13 @@ For BizTalk Server 2016 and older this configuration is illustrated below, and r
 
 ![SQLAG_Recommended](../core/media/sqlag-recommended.png)
  
-Starting with BizTalk Server 2020, high availablity for BAM DTS packages is supported using SSIS Catalog. Add SSISDB database to availability group alongwith BizTalk databases.
+**Starting with BizTalk Server 2020**, high availablity for BAM DTS packages is supported using SSIS Catalog. Add SSISDB database to availability group alongwith BizTalk databases.
 
-Starting with BizTalk Server 2020, this configuration is illustrated below, and recommended for BizTalk Databases in Availability Groups:  
+**Starting with BizTalk Server 2020**, this configuration is illustrated below, and recommended for BizTalk Databases in Availability Groups:  
 
 ![SQLAG_BTS2020_Recommended](../core/media/sqlag-bts2020-recommended.png)
 
-Along with SQL Server databases, BizTalk Server configuration also creates SQL Server security logins and SQL Agent Jobs. AlwaysOn Availability Groups only provide the ability to manage databases inside an Availability Group. Logins and SQL Agent Jobs for BizTalk need to be created and updated/managed manually on all the availability replicas.  
+In addition to SQL Server databases, BizTalk Server configuration also creates SQL Server security logins and SQL Agent Jobs. AlwaysOn Availability Groups only provide the ability to manage databases inside an Availability Group. Logins and SQL Agent Jobs for BizTalk need to be created and updated/managed manually on all the availability replicas.  
 
 The following list of SQL Server security logins are associated with BizTalk Server. You may have additional logins created for your BizTalk Server applications. If so, you need to replicate them on every instance of SQL Server hosting a replica of BizTalk databases. 
 
@@ -136,7 +136,7 @@ Replace `‘dbname’` with the corresponding database name against which the jo
 9. Script Logins and SQL Agent Jobs to replicate them on corresponding replica. 
 10. Replicate SQL DBMail Profile and Account for BAM Alerts on corresponding SQL instances hosting the secondary replica. 
 11. If you are adding an additional message box database or deploying a new BAM activity/view later, then new SQL jobs are created for new message box databases or BAM Alerts database on the current primary replica. Make sure to edit it on primary replica, and then create them manually on the corresponding secondary replicas. 
-12. Starting with BizTalk Server 2020, BAM DTS packages are deployed to SSIS Catalog. Add SSISDB database to availability group alongwith BizTalk databases. Use steps provided in [AlwaysON for SSIS Catalog](https://docs.microsoft.com/en-us/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15#always-on-for-ssis-catalog-ssisdb).
+12. **Starting with BizTalk Server 2020**, BAM DTS packages are deployed to SSIS Catalog. Add SSISDB database to availability group alongwith BizTalk databases. Use steps provided in [AlwaysON for SSIS Catalog](https://docs.microsoft.com/en-us/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15#always-on-for-ssis-catalog-ssisdb).
 
 This configuration can also be done using the SQL Instances hosting the primary replica. In this case, after the BizTalk configuration, run the `UpdateDatabase.vbs` and `UpdateRegistry.vbs` scripts on the BizTalk machines after the above steps. This is discussed in more detail in the next section.  
  
@@ -197,9 +197,9 @@ This configuration can also be done using the SQL Instances hosting the primary 
 
 ## Requirements 
 
-* BizTalk Server 2020 Enterprise or BizTalk Server 2016 Enterprise CU5
-* SQL Server 2019 or SQL Server 2017 or SQL Server 2016 Enterprise or SQL Server 2016 Standard (see **Known limitations** in this topic)
-* Windows Server 2019 or Windows Server 2016 
+* BizTalk Server 2020 Enterprise, BizTalk Server 2016 Enterprise CU5
+* SQL Server 2019 Enterprise/Standard, SQL Server 2017 Enterprise/Standard, SQL Server 2016 Enterprise/Standard (see **Known limitations** in this topic for SQL Server Standard Edition limitation)
+* Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ### Availability Group Listener configured with non-default port (1433) 
 
@@ -261,11 +261,12 @@ These limitations are for BizTalk Server, SQL Server AlwaysOn Availability Group
 * Logins, SQL Agent Jobs, the SQL DB Mail profile, and accounts are not managed within Availability Groups. This requires manual modification in Jobs to make sure they run against the primary replica. 
 * SQL Server Analysis Services and SQL Server Integration Services do not participate in Availability Groups. Without this support from SQL Server, there is no HA solution for these in Azure Virtual Machines. BizTalk Server’s BAM capabilities are dependent on these services.
 
+  [!NOTE]
   BizTalk Server 2020 supports high availability for BAM DTS packages using SSIS Catalog.
 
-* Prior to SQL Server 2016 SP2, Availability Groups don't support MSDTC between databases on the same SQL instance. Therefore, a minimum 8 SQL instances are required to configure BizTalk. 
+* Prior to SQL Server 2016 SP2, Availability Groups don't support MSDTC between databases on the same SQL instance. 
 
-  Starting with SQL Server 2016 SP2 *and* BizTalk Server 2020 *and* BizTalk Server 2016 [CU5](https://support.microsoft.com/help/2555976/service-pack-and-cumulative-update-list-for-biztalk-server), the BizTalk databases can use the same SQL Server instance. 
+  Starting with SQL Server 2016 SP2 *and* BizTalk Server 2016 [CU5](https://support.microsoft.com/help/2555976/service-pack-and-cumulative-update-list-for-biztalk-server), the BizTalk databases can use the same SQL Server instance. 
   
 * BizTalk Server cannot use Read-Only Routing. 
 * BizTalk Server does not set the `MultiSubnetFailover` connection property. 
