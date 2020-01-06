@@ -185,8 +185,9 @@ Windows Identity Foundation is included with the operating system as a **Feature
 2. Select **Windows Identity Foundation 3.5**, and continue with the installation. 
 3. Restart the computer if prompted.
 
-## Install SQL Server 2016 Analysis Service ADO MD
+## Install SQL Server 2016 Analysis Service ADOMD
 
+Download and install x86 and x64 SQL_AS_ADOMD from [Microsoft SQL Server 2016 Feature Pack download](https://www.microsoft.com/download/details.aspx?id=52676).
 
 ## Install & configure SMTP Server (optional)
 
