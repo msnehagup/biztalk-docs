@@ -261,9 +261,6 @@ These limitations are for BizTalk Server, SQL Server AlwaysOn Availability Group
 * Logins, SQL Agent Jobs, the SQL DB Mail profile, and accounts are not managed within Availability Groups. This requires manual modification in Jobs to make sure they run against the primary replica. 
 * SQL Server Analysis Services and SQL Server Integration Services do not participate in Availability Groups. Without this support from SQL Server, there is no HA solution for these in Azure Virtual Machines. BizTalk Server’s BAM capabilities are dependent on these services.
 
-> [!NOTE]
->  BizTalk Server 2020 supports high availability for BAM DTS packages using SSIS Catalog.
-
 * Prior to SQL Server 2016 SP2, Availability Groups don't support MSDTC between databases on the same SQL instance. 
 
   Starting with SQL Server 2016 SP2 *and* BizTalk Server 2016 [CU5](https://support.microsoft.com/help/2555976/service-pack-and-cumulative-update-list-for-biztalk-server), the BizTalk databases can use the same SQL Server instance. 
