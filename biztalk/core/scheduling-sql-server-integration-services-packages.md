@@ -95,6 +95,8 @@ Users create BAM views based on data stored in an online analytical processing (
 
 8.  Right-click the **BAM_DM_\<Activity name\>.dtsx** package, and then click **Execute...**.
 
+    ![bts2020execute_bamdmpacage](../core/media/bam-dts-dm-execute.png)
+
 #### For BizTalk Server 2016 and older
 1.  Click **Start**, click **All Programs**, click **Microsoft SQL Server 2008 SP1** or **Microsoft SQL Server 2008 R2**, and then click **SQL Server Management Studio**.
 
