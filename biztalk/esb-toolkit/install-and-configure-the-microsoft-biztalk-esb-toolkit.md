@@ -35,7 +35,11 @@ Starting with BizTalk Server 2013 and newer versions, [!INCLUDE[esbToolkit](../i
 5. Select **Finish** to close the installation wizard.  
 
 An install log file is created, similar to `C:\Users\yourUserName\AppData\Local\Temp\Setup(081017 175042).htm'. 
-  
+
+6. **Starting with BizTalk Server 2020**, to install **Itinerary Designer**, also install **BizTalk ESB Toolkit Itinerary Designer extension** in **Visual Studio**.
+
+![ESB-ItineraryDesigner-extension](../esb-toolkit/media/ESB-ItineraryDesigner-extension.png)
+
 ## Configure 
   
 > [!IMPORTANT]

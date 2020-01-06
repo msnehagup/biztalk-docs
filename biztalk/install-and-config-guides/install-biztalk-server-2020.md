@@ -59,8 +59,12 @@ Install BizTalk Server on a single computer.
       To enable auto-logon after a system reboot, select **Set**, and enter the sign-in account. This is only enabled during the BizTalk setup. When setup is complete, this setting is disabled. 
 
      Select **Install**.
-  
-8. To configure BizTalk now, check **Launch BizTalk Server Configuration**. If you don't want to configure BizTalk now, then uncheck this option, and select **Finish** to close the installation wizard. 
+
+8. To complete **Developer Tools** component installation, install **BizTalk Server extension** in **Visual Studio**.
+
+    ![BizTalkServer-extension](../install-and-config-guides/media/BizTalkServer-extension.png)
+
+9. To configure BizTalk now, check **Launch BizTalk Server Configuration**. If you don't want to configure BizTalk now, then uncheck this option, and select **Finish** to close the installation wizard. 
 
 A setup log file is generated in a temp folder, similar to: `C:\Users\*username*\AppData\Local\Setup(011217 xxxxxx).htm`
   
