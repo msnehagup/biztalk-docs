@@ -81,18 +81,6 @@ BizTalk Server setup keeps a record of events in the Application Event Log. Depe
 
 4. Select **OK**.
 
-## Edge can’t be opened (optional)
-
-When using Edge, the following message displays:  
-`Microsoft Edge can't be opened using the Built-in Administrator account. Sign in with a different account and try again.`
-
-To allow Edge to open using the built-in administrator account:
-
-1. In the Start menu, open **Local Security Policy**. Or, open **Server Manager**, select **Tools**, and then select **Local Security Policy**.
-2. Expand **Local Policies**, and select **Security Options**. 
-3. Go to the **User Account Control: Admin Approval Mode for the Built-in Administrator account** policy, and **Enable** the policy. 
-4. Select **OK**, and restart your computer.
-
 ## Install Windows Updates
 
 Be sure to install the latest critical Windows updates. 
@@ -271,8 +259,7 @@ If you use BAM Alerts, BizTalk Server requires SQL Server Database Mail. If you 
 > - You need to know the server name and TCP port number for the SMTP Server. If you installed IIS and SMTP Server on this same computer, then you use the local SMTP Server. If the SMTP server requires authentication, then have the user name and password ready.
 > - The BAM portal and BAM Alerts are separate features. If you are using BAM Alerts, then SQL Server Database Mail is required. If you are not using BAM Alerts, then SQL Server Database Mail is not required.
 
-**For specific configuration steps, see**: Configure [SQL Server 2016 Database Mail](https://docs.microsoft.com/sql/relational-databases/database-mail/configure-database-mail) or [SQL Server 2014 Database Mail](https://msdn.microsoft.com/library/hh245116(v=sql.120).aspx).
-
+**For specific configuration steps, see**: Configure [SQL Server Database Mail](https://docs.microsoft.com/sql/relational-databases/database-mail/configure-database-mail).
    
 To send a test email: 
 1. Right-click **Database Mail**, and select **Send Test E-Mail**. 
