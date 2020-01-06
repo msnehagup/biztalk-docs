@@ -224,7 +224,7 @@ BizTalk Server requires SQL Server. SQL Server can be installed on the same comp
 > - BizTalk Server supports SQL Standard Edition. However, to use Business Activity Monitoring real-time aggregation (BAM RTA), install SQL Server Enterprise Edition. BAM real-time aggregation (RTA) is not supported in the Standard Edition of SQL Server.
 > - BizTalk Server supports all case-sensitive and case-insensitive SQL Server collations except for binary collations. Binary collations are not supported.
 
-**For specific install steps, see** [Install SQL Server 2019](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup?view=sql-server-ver15) or [Install SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup?view=sql-server-2017) or [Install SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup?view=sql-server-2016).
+**For specific install steps, see** [Install SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup).
 
 1. Start the SQL Server installation. 
 2. During the Feature setup, select the following:
@@ -234,7 +234,11 @@ BizTalk Server requires SQL Server. SQL Server can be installed on the same comp
       - Client Tools Connectivity
       - Integration Services
 
-3. Continue with the installation, and restart the computer if prompted.
+3. Configure Analysis Services in Multidimensional Mode. Default is Tabular Mode, make sure to change it to Multidimensional Mode in SQL Server installation wizard before continuing with installation.
+
+    ![sqlasconfiguration](../install-and-config-guides/media/sqlasconfiguration.png)
+
+4. Continue with the installation, and restart the computer if prompted.
 
 ## Disable Shared Memory
 
