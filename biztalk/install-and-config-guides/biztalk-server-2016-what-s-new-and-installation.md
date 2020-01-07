@@ -18,7 +18,7 @@ manager: "anneta"
 
 ## Get started with BizTalk Server 2016
 
-With BizTalk Server 2020, you can expect closer integration with Azure using the new Logic Apps adapter, and connect to Azure resources using the File and WCF-SQL adapters. 
+With BizTalk Server 2016, you can expect closer integration with Azure using the new Logic Apps adapter, and connect to Azure resources using the File and WCF-SQL adapters. 
 
 One of the biggest changes is support for SQL Server 2016 AlwaysOn Availability Groups (AG). This support covers using BizTalk Server on-premises, and using BizTalk Server Azure virtual machines. With AlwaysOn, you can now have a highly-available solution using Azure virtual machines.
 
