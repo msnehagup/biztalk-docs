@@ -5,8 +5,8 @@ caps.latest.revision: 8
 author: "MandiOhlinger"
 manager: "anneta"
 
-ms.custom: ""
-ms.date: "08/10/2017"
+ms.custom: "biztalk-2020"
+ms.date: "01/06/2020"
 ms.prod: "biztalk-server"
 ms.reviewer: ""
 ms.suite: ""
