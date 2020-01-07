@@ -59,4 +59,4 @@ All service packs, cumulative updates, security updates, and hotfixes are suppor
 
  ## Next Step
 
-[Set up and install prerequisites](../install-and-config-guides/set-up-and-install-prerequisites-for-biztalk-server-2016.md)
+[Set up and install prerequisites](../install-and-config-guides/set-up-and-install-prerequisites-for-biztalk-server-2020.md)
