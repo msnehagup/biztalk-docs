@@ -1,5 +1,5 @@
 ---
-title: "Install BizTalk Server 2016 | Microsoft Docs"
+title: "Install BizTalk Server 2020 | Microsoft Docs"
 ms.custom: "biztalk-2020"
 ms.date: "01/06/2020"
 ms.prod: biztalk-server
@@ -13,7 +13,7 @@ author: "MandiOhlinger"
 ms.author: "mandia"
 manager: "anneta"
 ---
-# Install BizTalk Server 2016
+# Install BizTalk Server 2020
 Install BizTalk Server on a single computer.
 
 ## Before you get started

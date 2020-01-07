@@ -1,9 +1,9 @@
 ---
-title: "Hardware and Software Requirements for BizTalk Server 2016 | Microsoft Docs"
-description: Software prerequisites and supported version lists to install BizTalk Server 2016
-ms.custom: ""
+title: "Hardware and Software Requirements for BizTalk Server 2020 | Microsoft Docs"
+description: Software prerequisites and supported version lists to install BizTalk Server 2020
+ms.custom: "biztalk-2020"
 ms.prod: biztalk-server
-ms.date: "04/25/2018"
+ms.date: "01/07/2020"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +14,7 @@ author: "MandiOhlinger"
 ms.author: "mandia"
 manager: "anneta"
 ---
-# Hardware and Software Requirements for BizTalk Server 2016
+# Hardware and Software Requirements for BizTalk Server 2020
 
 ## Hardware requirements
 
