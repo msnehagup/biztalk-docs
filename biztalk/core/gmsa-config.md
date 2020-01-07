@@ -21,7 +21,7 @@ ms.custom:
 
 # Using Group Managed Service Account for BizTalk Server Features
 
-BizTalk 2020 Supports Group Managed Service Account. Detailed information about gMSA can be found [here](https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) .
+BizTalk 2020 Supports Group Managed Service Account. Detailed information about gMSA can be found [here](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) .
 
 With gMSA support users can continue to run BizTalk service without having the need to change passwords.
 
@@ -33,7 +33,7 @@ There are multiple BizTalk Features and following table shows the features where
 | Group | N/A |
 | BizTalk Runtime | Yes |
 | Business Rules Engine | Yes |
-| BAM Tools | Yes for Bam Alerts |
+| BAM Tools | Yes (for Bam Alerts) |
 | BAM Portal | Only for Application Pool Account |
 | BizTalk EDI/AS2 Runtime | N/A |
 | Rest API | Yes |
@@ -46,7 +46,7 @@ New installations of BizTalk may be configured with gMSA(where ever supported) b
 
 The features where gMSA is supported shows a check box which when checked password gets disabled. The user name should be set to appropriate gMSA account.
 
-![BizTalk Server Logon Credentials for ](media\gmsa-login-dialog.png)
+![BizTalk_Server_gmsa_login_dialog](media/gmsa-login-dialog.png)
 
 Users upgrading to BizTalk 2020, may use the below mentioned ways to configure individual features with gMSA.
 
@@ -59,13 +59,13 @@ Users can update logon information using `BizTalk Server Administration Console`
 3. Click on configure button and configure logon while choosing `"Is Group Managed Service Account"`
 
 
-![BizTalk Server Logon Credentials for ](media\mmc-gmsa-logon.png)
+![BizTalk_Server_mmc_gmsa_logon_dialog](media/mmc-gmsa-logon.png)
 
 ## Business Rules Engine, BAM Alerts & BizTalk TMS
 
 Users may update 'Rule Engine Update Service', 'BAMAlerts' and 'BizTalk TMS' services with appropriate logon for group managed service account.
 To change logon, please use sc config or Services MMC(Microsoft Management Console).
-Detailed information on sc config can be found [here](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/sc-config)
+Detailed information on sc config can be found [here](https://docs.microsoft.com/windows-server/administration/windows-commands/sc-config)
 
 ## BAM Portal and Rest API
 
