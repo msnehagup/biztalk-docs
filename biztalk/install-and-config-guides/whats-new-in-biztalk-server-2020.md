@@ -33,11 +33,11 @@ Read about what's new in BizTalk Server 2020.
 |API Management| 	Publish Orchestration endpoints using Azure API Management, enabling organizations to publish APIs to external, partner and internal developers to unlock the potential of their data and services.<br/><br/>[Connect to Azure API Management](../core/connect-to-azure-api-management.md)|  
 | Event Hubs Adapter | 	Using the new Event Hub Adapter, BizTalk Server can send and receive messages with Azure Event Hubs, where BizTalk Server can function as both an event publisher and subscriber, as part of a new Azure cloud-based event-driven application.<br/><br/>[Event Hubs adapter](../core/event-hubs-adapter.md)|
 | Office 365 Adapters | Leverage the power of BizTalk in newer office automation workflows by integrating with Adapters that allows you to send or receive Office 365 emails, receive or transmit Office 365 calendar events and create Office 365 contacts.<br/><br/>[Office 365 Outlook Email adapter](../core/office365-mail-adapter.md)<br/>[Office 365 Outlook Calendar adapter](../core/office365-calendar-adapter.md)<br/>[Office 365 Outlook Contact adapter](../core/office365-contact-adapter.md)|
-|Group Managed Service Accounts|Extend windows GMSA support to BizTalk operations and services.|  
-|Blob Adapter|Send and Receive messages to/from Azure Blob Storage.|  
+|Group Managed Service Accounts|Extend windows GMSA support to BizTalk operations and services. <br/><br/>[Using Group Managed Service Account](../core/gmsa-config.md)|  
+|Blob Adapter|Send and Receive messages to/from Azure Blob Storage. <br/><br/>[Azure Blob storage adapter](../core/azure-blob-adapter.md)|  
 |Audit Log|Making BizTalk further secure by maintaining audit trails of all management operation.|  
 |New Read Only Operator role|Brand new read only operator role to facilitate dev ops model, where access to production stamp is provided without the ability to update anything.|  
-|XSLT 3.0|New extensible model for runtime map execution, out of box wiring to work with Saxon XSLT3.0|  
+|XSLT 3.0|New extensible model for runtime map execution, out of box wiring to work with Saxon XSLT3.0. <br/><br/>[XSLT Transform Engine](../../../technical-reference/xslt-transform-engine-grid-property.md)<br/>[Azure Blob storage adapter](../../../technical-reference/xslt-custom-transform-implementation.md)|  
 |Additional updates|<ul><li>Move to new long term supported Microsoft OLEDB Driver for SQL Server. </li><br/><li>Support for SSO Affiliate applications in SFTP adapter.</li><br/><li>SQL Availability Group support for BAM DTS Package via SSIS Catalog.</li><br/><li>Partially disabled receive locations.</li><br/><li>Throughput improvements for Dynamic Send Ports with Ordered Delivery.</li></ul>|   
   
 ## Deprecated & Removed List  
