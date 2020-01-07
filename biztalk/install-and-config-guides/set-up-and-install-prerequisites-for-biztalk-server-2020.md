@@ -139,9 +139,6 @@ IIS is included with the operating system as a **Role** or a **Feature**, depend
 
 3. Continue with the installation, and restart the computer if prompted. 
 
-**SEE ALSO** : Install IIS on [Windows 8 or Windows Server 2012](http://www.iis.net/learn/get-started/whats-new-in-iis-8/installing-iis-8-on-windows-server-2012).
-
-
 ## Run 64-bit BAM portal (optional)
 
 If you don't use the BAM portal, then you can skip this section. 
@@ -249,10 +246,6 @@ BizTalk Server requires SQL Server. SQL Server can be installed on the same comp
 5. Close **SQL Server Configuration Manager**.
 
 Typically, the Shared Memory protocol only impacts clients (BizTalk Server) that are installed on the same computer as SQL Server. Under certain stress conditions (such as clients accessing SQL Server from the same computer), the SQL Server Shared Memory protocol may lower BizTalk Server performance. Disabling the Shared Memory network protocol resolves this.
-
-> [!TIP]
-> If SQL Server Agent fails to start after disabling Shared Memory, then confirm 
-> [ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) is installed.
 
 ## Configure SQL Database Mail (optional)
 If you use BAM Alerts, BizTalk Server requires SQL Server Database Mail. If you don't use BAM Alerts, then skip this section. 
