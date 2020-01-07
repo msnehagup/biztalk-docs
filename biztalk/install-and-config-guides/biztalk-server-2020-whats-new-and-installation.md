@@ -24,7 +24,7 @@ Traditionally, integration has been either on-premises system to system EAI (Ent
 
 Starting with this release, BizTalk server aims to embark upon a more open and collaborative evolution in times to come. 
 
-In this BizTalk Server 2020 set of topics, we focus on the specific documentation for BizTalk Server 2020, including what's changed, and the installation. So, if you want to read about high availability, monitoring your BizTalk environment, and more, then go to the [BizTalk Server core documentation](../core/biztalk-server-core-documentation.md). If you want to configure BizTalk Server, then go [Configure BizTalk Server](../install-and-config-guides/configure-biztalk-server.md). If you want to read about what's new, and install BizTalk Server 2020, then get started with the following links:  
+In this BizTalk Server 2020 set of topics, we focus on the specific documentation for BizTalk Server 2020, including what's changed, and the installation. So, if you want to read about XSLT3.0 support, Blob adapter, auditing BizTalk managment operations, read only operator role and more, then go to the [BizTalk Server core documentation](../core/biztalk-server-core-documentation.md). If you want to configure BizTalk Server, then go [Configure BizTalk Server](../install-and-config-guides/configure-biztalk-server.md). If you want to read about what's new, and install BizTalk Server 2020, then get started with the following links:  
 
 * [What's New](../install-and-config-guides/whats-new-in-biztalk-server-2020.md)  
 * [Hardware and Software Requirements](../install-and-config-guides/hardware-and-software-requirements-for-biztalk-server-2020.md)  
