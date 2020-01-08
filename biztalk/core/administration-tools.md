@@ -32,6 +32,14 @@ You can use the following tools to administer BizTalk ServerBizTalk Server, to m
 
    The WMI object model exposes and simplifies administrative APIs. All administration APIs expose some form of the following operations on every object they manage: create, enumerate, modify, and delete. WMI exposes this functionality in a consistent manner for all WMI objects.
 
+- **Management REST APIs** are endpoints that allow user to remotely add, update, and query status of different artifacts in your BizTalk Server environment using REST APIs. BizTalk **Management REST APIs** comes with a swagger definition.
+
+   You must [Configure the REST APIs](../install-and-config-guides/configure-biztalk-server.md) before you can use **Management REST APIs**. See [REST APIs reference](https://docs.microsoft.com/rest/api/biztalk/?view=rest-biztalk) for more information.
+
+- **Operational Data service** provides data on the instances and messages flowing through your BizTalk Server environment. The operational data feed is the same data you get looking at Group Hub in BizTalk Server Administration. The data can be accessed and queried using visualization tools, including Power BI.
+   
+   Like **Management REST APIs**, you must [Configure the REST APIs](../install-and-config-guides/configure-biztalk-server.md) before you can use **Operational Data service**. See [Configure data feed for Power BI](configure-the-operational-data-feed-for-power-bi-with-biztalk-server.md) more information about how to use **Operational Data service**.
+
 - **Business Activity Monitoring (BAM).** BAM uses a Microsoft Office Excel workbook to provide business users with a way to see a real-time holistic view of business processes. For more information about BAM, see [Using Business Activity Monitoring](../core/using-business-activity-monitoring.md).
 
 
