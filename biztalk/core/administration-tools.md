@@ -34,11 +34,11 @@ You can use the following tools to administer BizTalk ServerBizTalk Server, to m
 
 - **Management REST APIs** are endpoints that allow user to remotely add, update, and query status of different artifacts in your BizTalk Server environment using REST APIs. BizTalk **Management REST APIs** comes with a swagger definition.
 
-   You must [Configure the REST APIs](../install-and-config-guides/configure-biztalk-server.md) before you can use **Management REST APIs**. See [REST APIs reference](https://docs.microsoft.com/rest/api/biztalk/?view=rest-biztalk) for more information.
+   You must [Configure the REST APIs](../install-and-config-guides/configure-biztalk-server.md) for  **Management REST APIs** before you can use it. See [REST APIs reference](https://docs.microsoft.com/rest/api/biztalk/?view=rest-biztalk) for more information.
 
-- **Operational Data service** provides data on the instances and messages flowing through your BizTalk Server environment. The operational data feed is the same data you get looking at Group Hub in BizTalk Server Administration. The data can be accessed and queried using visualization tools, including Power BI.
+- **Operational Data Service** provides data on the instances and messages flowing through your BizTalk Server environment. The operational data feed is the same data you get looking at Group Hub in BizTalk Server Administration. The data can be accessed and queried using visualization tools, including Power BI.
    
-   Like **Management REST APIs**, you must [Configure the REST APIs](../install-and-config-guides/configure-biztalk-server.md) before you can use **Operational Data service**. See [Configure data feed for Power BI](configure-the-operational-data-feed-for-power-bi-with-biztalk-server.md) more information about how to use **Operational Data service**.
+   Like **Management REST APIs**, you must [Configure the REST APIs](../install-and-config-guides/configure-biztalk-server.md) for **Operational Data Service** before you can use it. See [Operational Data Service](operational-data-service.md) for more information.
 
 - **Business Activity Monitoring (BAM).** BAM uses a Microsoft Office Excel workbook to provide business users with a way to see a real-time holistic view of business processes. For more information about BAM, see [Using Business Activity Monitoring](../core/using-business-activity-monitoring.md).
 
