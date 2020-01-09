@@ -91,7 +91,7 @@ Global level XSLT transform engine will be used if "Undefined" is selected for m
 
 Only standard XSLT and XPath instructions are supported in Saxon if claimed. Saxon also provides several different ways of extensions, most of which are only available in PE and EE, create custom XSLT transform based on these editions if you are willing to use Saxon PE and EE.
 
-**Custom Extension XML** is still a supported way for creating your custom extension for Saxon 9 HE transform engine. Create custom .Net extension functions by implementing ExtensionFunction or ExtensionFunctionDefinition intefaces, and add your implementations into **Custom Extension XML**.  Saxon 9 HE transform engine will register extension functions defined in **Custom Extension XML**, and transform processor can then recognize and invoke any call from XSLT.
+**Custom Extension XML** is still a supported way for creating your custom extension for Saxon 9 HE transform engine. Create custom .Net extension functions by implementing interface ExtensionFunction or ExtensionFunctionDefinition, and add your implementations into **Custom Extension XML**.  Saxon 9 HE transform engine will register extension functions defined in **Custom Extension XML**, and transform processor can then recognize and invoke any call from XSLT.
 
 
 
