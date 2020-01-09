@@ -130,6 +130,6 @@ namespace CustomTransform
 
 ## See Also
 
-[XSLT custom transform engine property](xslt-transform-engine-grid-properties.md)
+[XSLT custom transform engine property](xslt-transform-engine-grid-property.md)
 
 [Custom Extension XML](custom-extension-xml-grid-property.md)
