@@ -54,7 +54,7 @@ Read about what's new in BizTalk Server 2020.
 |                OWC redist                 |  Removed   |                                                                                                                                                   None                                                                                                                                                    |
 |                BAM Portal                 |  Deprecated   |                                                                                                                                                   None                                                                                                                                                    |
 |                WCF-NetTcpRelay adapter                 |  Deprecated   |                                                                                                                                                   None                                                                                                                                                    |
-|                BAM or its components                 |  Deprecated   |                                                                                                                                                                                                                                                                                                       |
+
   
 > [!IMPORTANT]
 >  Some of these deprecated features may be found in newer versions of BizTalk. In these scenarios, consider the following:  
