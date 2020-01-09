@@ -41,7 +41,7 @@ Azure Blob storage is Microsoft's object storage solution for the cloud, which i
 
 3. Configure the **Azure Account** properties.
     >[!NOTE]
-    > Adapter configuration dialog can auto-populate the Azure resources after sign into your Azure subscription, which make the adapter configuration easier. But it is not essensial, user can configure adapter properties without owning any Azure subscription or sign-in. 
+    > Adapter configuration dialog can auto-populate the Azure resources after signing into the relevant Azure subscription. This makes the configuration easier. Signing into the Azure subscription is not mandatory. 
 
     |Use this|To do this|  
     |---|---|  
@@ -54,10 +54,10 @@ Azure Blob storage is Microsoft's object storage solution for the cloud, which i
 
     |Use this|To do this|  
     |---|---|  
-    | **Storage Authentication** | Select an authentication method. <ul><li>Typically, it's recommended to use a Shared Access Signature, which is also selected by default. You can input the Shared Access Signature connection string in the **Connection string** field to provide the authentication.</li> <li>If you are using Access keys as authentication method, a collection of storage account will be populated up in **Account** drop-down list. After you select the storage account, **Connection string** field will be automatically populated with your primary access key, which also known as **key1**. </li></ul><br />The following links are good resources to help you decide which authentication method is right for your scenario:<br/><br/>[Authorizing access to data in Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-auth)<br/>[Using shared access signatures (SAS)](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
-    | **Blob container name** | Select the name of your Blob container from the drop-down list. The list should be auto-populated after the **Connection string** field is filled up. |
-    | **Blob name** | Specify name of the blob used by the adapter to upload the message to Blob storage container. Macros can be used for Blob name, similar to file name property of file adapter. For available Macros please refer to [Using macros in file names](restrictions-when-configuring-the-file-adapter.md#using-macros-in-file-names). |
-    | **Namespace for blob metadata** | Specify namespace as a filter. Context properties of the message will be written to blob metadata if the namespace of the property match this field. |
+    | **Storage Authentication** | Select an authentication method. <ul><li>Shared Access Signature is selected by default. You must input the Shared Access Signature connection string in the **Connection string** field.</li> <li>If you are using Access keys as authentication method, a collection of storage account will be populated in **Account** drop-down list. Once you select the storage account, **Connection string** field will be automatically populated with your primary access key (also known as **key1**). </li></ul><br />The following links are good resources to help you decide which authentication method is right for your scenario:<br/><br/>[Authorizing access to data in Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-auth)<br/>[Using shared access signatures (SAS)](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
+    | **Blob container name** | Select the name of your Blob container from the drop-down list. The list is auto-populated after the **Connection string** is specified. |
+    | **Blob name** | Specify name of the blob in specified container to be used by the adapter to upload the message. Macros can be used in Blob name. For available Macros please refer to [Using macros in file names](restrictions-when-configuring-the-file-adapter.md#using-macros-in-file-names). |
+    | **Namespace for blob metadata** | Specify namespace as a filter. Context properties of the message will be written to blob metadata if the namespace of the property matches this field. |
 
     When finished, your properties look similar to the following: 
 
@@ -67,8 +67,8 @@ Azure Blob storage is Microsoft's object storage solution for the cloud, which i
 
     |Use this|To do this|  
     |---|---|  
-    |**Blob type**| Specify **Blob type** adapter will upload message as, visit [blob types](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) for more information. |
-    |**Write mode**| Specify **Write mode** adapter will use in case of given **Blob name** already exists. 	<ul><li>Create new: Adapter will always try to create new blob, if blob with same path already exists, error will be thrown into **Windows Event Viewer**. And messages will be suspended. </li><li>Overwrite: Adapter will overwrite if blob with given Blob name already exists, metadata will be overwritten as well.</li><li>Append: Adapter will append to exists blob if Blob already exists, notice only new content(from message body) will be appended, metadata will not change.</li></ul>|  
+    |**Blob type**| Specify **Blob type** to be used, visit [blob types](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) for more information. |
+    |**Write mode**| Use this setting to specify adapter behavior when given **Blob name** already exists. 	<ul><li>Create new: Adapter will always try to create new blob. In case of conflict, error will be shown into **Windows Event Viewer** and messages will be suspended. </li><li>Overwrite: Adapter will overwrite if blob with given name already exists, metadata will be overwritten as well.</li><li>Append: Adapter will append message body to existing blob if Blob already exists, metadata will not change.</li></ul>|  
 
 6. Select **Ok** to save your changes. 
 
