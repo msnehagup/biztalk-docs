@@ -133,7 +133,7 @@ You can use a simple File receive port and location to send messages to your Azu
     |Use this|To do this|  
     |---|---|  
     | **Polling interval** | Specify the polling interval. |
-    | **Maximum messages per batch** | Specify number of messages Adapter will batch when submitting to BizTalk.|
+    | **Maximum messages per batch** | Specify number of messages adapter will batch when submitting to BizTalk.|
     | **Parallel downloads** | Specify maximum number of blobs allowed to be downloaded in parallel.|
     | **Error threshold** | Specify the error threshold. The receive location will be disabled when the number of errors that the receive location encounters reaches this limit.|
 
