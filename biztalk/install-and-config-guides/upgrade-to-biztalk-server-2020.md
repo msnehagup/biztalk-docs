@@ -95,9 +95,13 @@ The following table lists the supported Edition upgrade path from BizTalk Server
 
 - **Configuration Files**: Back up all custom configuration files in BizTalk Server 2016. BizTalk Server supports migration of changes only in the `btsntsvc.exe.config` and `bm.exe.config` files.
 
+- **SQL Adapter**: SQL Adapter has been announced deprecated since multiple past releases of BizTalk Server. This is now removed from BizTalk Server 2020 installation. Upgrade will change existing EDI batching related ports and ESBT exceptions port to WCF-SQL Adapter. If you are still using SQL Adapter for anything other than BizTalk out of box components, redesign them to use WCF-SQL adapter before starting upgrade.
+
 ### BAM
 
 - **BAM DTS Packages**: Stop all BAM Data Transformation Services (DTS) packages. Otherwise, data may be lost or an online analytical processing (OLAP) cube may corrupt.
+
+- **BAM DTS Packages and SSIS Catalog**: BizTalk Server 2016 deployed BAM DTS Packages to SSIS Package Store (MSDB). Starting with BizTalk Server 2020, BAM DTS Package will be deployed to SSIS Catalog (SSISDB). Create SSIS Catalog (SSISDB) on SQL Server before starting upgrade, otherwise upgrade process will not move deployed BAM DTS Packages to SSIS Catalog.
 
 - **Disk Space**: The free disk space should be at least the size of the existing BAM databases.
 
@@ -125,6 +129,7 @@ The following table lists the supported Edition upgrade path from BizTalk Server
      > [!NOTE]
      > Regenerated LiveData Workbooks do not recreate the Excel artifacts (for example, charts) in the original LiveData Workbook. Manually recreate the artifacts.
 
+- **BAM Tools pre-requisites**: SSIS installation is required on BAM Tools machine. Install equivalent version of SSIS as your SQL Server on machine where BAM Tools is configured. You can stop and disable SSIS windows service after installation of SSIS on this machine.
 
 ### Enterprise Single Sign-On (ESSO)
 
@@ -173,8 +178,12 @@ Using the Settings Dashboard, you can extensively tweak BizTalk Server settings 
 |                 Task                  |                                                                                                                                                                                                                                        Info                                                                                                                                                                                                                                         |
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   Install Critical Windows Updates    |                                                                                                                                                                                                Select Windows Update from the Programs menu. You may need to restart your computer.                                                                                                                                                                                                 |
+|   Install Microsoft OLEDB Driver for SQL Server    |                                                                                                                                                                                                Install Microsoft OLEDB Driver for SQL Server on all BizTalk machines.                                                                                                                                                                                                 |
+|   Install Visual C++ 2015-2019 Redist    |                                                                                                                                                                                                Install x86 and x64 versions of Visual C++ 2015-2019 Redistributable packages on all BizTalk machines.                                                                                                                                                                                                 |
 |          Upgrade SQL Server           |                                         Upgrade to a supported SQL Server version. See:<br/><br/>[Hardware and Software Requirements for BizTalk Server 2020](../install-and-config-guides/hardware-and-software-requirements-for-biztalk-server-2020.md)<br/>[Upgrade SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/upgrade-sql-server)                       |
 |    Upgrade SQL Server Client Tools    |                                                                                                                                                In a multicomputer environment, the Administration tools may be installed on a separate computer. Upgrade the SQL Server Administration Client Tools, including the Management Tools.                                                                                                                                                |
+|    Install SQL Server Integration Services    |                                                                                                                                                In a multicomputer environment, the BAM Tools may be installed and configured on a separate computer. Install equivalent version of SQL Server Integration Services as your target SQL Server version.                                                                                                                                                |
+|    Create SSIS Catalog    |    Create SSIS Catalog (SSISDB)  on SQL Server                                                                                                                      |
 |         Install Visual Studio         |                         See [Hardware and Software Requirements for BizTalk Server 2020](../install-and-config-guides/hardware-and-software-requirements-for-biztalk-server-2020.md) for the supported versions. Different Visual Studio versions can be installed side-by-side. See [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio-versions-side-by-side).                         |
 |            Install Office             |                                     See [Install and use different versions of Office](https://support.office.com/article/Install-and-use-different-versions-of-Office-on-the-same-PC-6EBB44CE-18A3-43F9-A187-B78C513788BF) on the same computer. [Hardware and Software Requirements for BizTalk Server 2020](../install-and-config-guides/hardware-and-software-requirements-for-biztalk-server-2020.md) lists the supported Office versions.                                     |
 | Stop the BizTalk and Windows Services |                                                                                                      - BizTalk Service BizTalk Group:  *<Application_Name>*<br/>- Rule Engine Update Service<br/>- World Wide Web Publishing Service<br/><br/>**NOTE**<br/>If you have any BizTalk Server accelerators installed, stop the HL7 Logging Service.                                                                                                      |
@@ -213,7 +222,13 @@ To verify if the upgrade is successful, open **Programs and Features** and look 
 ## Post upgrade
 You cannot roll back to BizTalk Server 2016.
 
-- **Install MQSAgent**: If the MQSAgent.dll file is installed on a remote WebSphere MQ Server, install a new version of the MQ Agent from [!INCLUDE[bts2016_md](../includes/bts2016-md.md)] on the remote WebSphere MQ Server.
+- **Install BizTalk Server extension in Visual Studio**: To complete BizTalk Developer Tools installation, install BizTalk Server extension in Visual Studio.
+
+- **Download and copy WinSCP**: If your are use SFTP adapter, download recommended version of WinSCP zip file and extract it to BizTalk Server 2020 installation folder.
+
+- **Uninstall OWC**: OWC is deprecated and not supported anymore by Microsoft. It is not recommended to leave it installed on BizTalk Server machines. Even if you use BAM Portal, uninstall OWC from the machine, BAM Portal will not show this component and remaining functionality of BAM Portal will continue to work.
+
+- **Install MQSAgent**: If the MQSAgent.dll file is installed on a remote WebSphere MQ Server, install a new version of the MQ Agent from BizTalk Server 2020 on the remote WebSphere MQ Server.
 
 - **Start MSMQ**: If you use the MSMQ adapter, start the Message Queuing service.
 
@@ -221,6 +236,18 @@ You cannot roll back to BizTalk Server 2016.
 
     -   DTA Purge and Archive (BizTalkDTADb): See [How to Configure the DTA Purge and Archive Job](../core/how-to-configure-the-dta-purge-and-archive-job.md)
     -   Backup BizTalk Server (BizTalkMgmtDb): See [How to Configure the Backup BizTalk Server Job](../core/how-to-configure-the-backup-biztalk-server-job.md)
+
+- **Scheduled BAM DTS packages**: If you have SQL Agent jobs to schedule BAM DTS packages, reconfigure the jobs to use SSIS packages from SSIS Catalog (SSISDB) instead of SSIS Package Store (MSDB).
+
+- **Enable Auditing**: If you want to enable auditing for BizTalk management operations, Enable Auditing through BizTalk Group Settings.
+
+- **BizTalk Server Read Only Users group**: If you want to configure Read Only Users role, run PowerShell script Configure-WindowsGroupForReadOnlyUserDBRole.ps1 with windows group as parameter. Make sure that you have SQL Server powershell module installed.
+
+- **BizTalk Server 2016 Feature Pack**: If you upgraded from BizTalk Server 2016 Feature Pack, below post upgrade actions are required.
+
+    - **O365 Adapters**: If you use O365 adapters, install BizTalk TMS feature and configure TMS Service. Then open all ports using O365 Adapter and login to you Outlook account once for every port.
+
+    - **Management Service and Operational Data Service**: If you use Management Service or Operational Data Service, delete exising Management Service and Operational Data Service in IIS Manager, delete corresponding App Pools, and then re-configure BizTalk REST API feature in BizTalk Server 2020 configuration.
 
 - **Restart applications**: Restart all deployed applications that are upgraded.
 
