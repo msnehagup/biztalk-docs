@@ -62,6 +62,27 @@ Maintaining a secure Microsoft [!INCLUDE[btsBizTalkServerNoVersion](../includes/
   > [!NOTE]
   >  If you want to allow a user who is a member of the BizTalk Server Operators group to monitor remote BizTalk servers, this user must also be a member of the local Administrators group on the remote computers.  
   
+- **BizTalk Server Read Only Users group**. A new BizTalk role that has been introduced **starting with BizTalk Server 2020**, that allows members to view Artifacts, service state, message flow and tracking information. This group does not have privileges to perform any type of administrative operations.  
+  
+   Below is the list of Operations a member of Read Only User Group can perform:   
+  
+  -	View all the User artifact information and Platform artifact such as Receive Port, Receive Location, Send Port, Orchestration, Maps, Policies, Pipelines, Host, Host Instances, Adapters etc. 
+
+  - View Message Flow and Message events. It cannot view Message Context and Message content.
+
+  - View general service instances details and error information.
+
+  - View tracking information.
+
+  - View Parties and Agreement information.
+
+  - View Group Hub Page, execute query, save query and load query.
+
+  - Can export Binding, Policies, and MSI but cannot import.
+  
+  > [!NOTE]
+  >  If a user who is a member of the BizTalk Server Read Only Users group is also a local administrator on the computers running BizTalk Server, this user can access data beyond the role of the Operators group on these computers. For more information, see [Minimum Security User Rights](../core/minimum-security-user-rights.md).  
+  
 - **Hosts and service accounts**. When creating a host and its associated host instances, you must provide the Windows group for the host and the service account credentials for each host instance. You must ensure that the host instance service accounts are members of the Windows group for the host.  
   
 - **Signing certificates**. Signing certificates (private key certificates) are specified for the BizTalk group. These are optional and can be changed at any time by a BizTalk Server administrator.  

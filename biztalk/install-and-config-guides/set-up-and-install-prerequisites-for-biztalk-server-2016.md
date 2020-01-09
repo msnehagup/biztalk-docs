@@ -351,7 +351,7 @@ If the **To:** recipient receives the email, then Database Mail is configured.
 
 ## Install WinSCP (optional)
 
-Required by the FTP adapter. If you don't use the FTP adapter, then skip this section. 
+Required by the SFTP adapter. If you don't use the SFTP adapter, then skip this section. 
 
 Download and install [WinSCP](http://winscp.net). 
 
