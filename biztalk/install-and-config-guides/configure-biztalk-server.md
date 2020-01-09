@@ -263,15 +263,15 @@ BAM alerts require BAM tools to be enabled.
     |REST APIs website|Select the Web site to host both the REST APIs. |
 
 ### Configure BizTalk TMS
+>[!NOTE]
+>Applicable starting **BizTalk Server 2020**.
 
-BizTalk TMS is a service that refreshes authentication tokens used by BizTalk, it is a prerequisite for some adapters, i.e. Office 365 series adapters.  
+BizTalk TMS is a service that refreshes authentication tokens used by BizTalk. It is a prerequisite for the Office 365 adapters.
 
 >[!IMPORTANT]
 ><li>TMS must be configured on a server which also has the "Enterprise Single Sign-On Service" (ENTSSO) running.</li>
 ><li>TMS should only be configured on a single server in a BizTalk Group. For high-availability scenarios, you may configure TMS on multiple servers in an Active-Passive topology.</li>
 
->[!NOTE]
->Applicable starting **BizTalk Server 2020**.
 
 1. Select **BizTalk TMS**.
 2. Configure the following:
