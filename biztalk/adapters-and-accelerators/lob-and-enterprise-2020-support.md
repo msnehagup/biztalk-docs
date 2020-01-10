@@ -6,7 +6,7 @@ description: Details of Line-of-Business (LOB) and Enterprise systems supported 
 author: msjaydeep
 ms.author: jaah
 manager: dougeby
-ms.date: 01/03/2019
+ms.date: 01/09/2019
 ms.topic: support-metrics
 ms.prod: biztalk-server
 
@@ -27,7 +27,7 @@ ms.custom: biztalk-2020
 This article lists the Line-of-Business (LOB) and Enterprise systems supported by `BizTalk Server 2020`. These details are about adapters installed with `BizTalk Server 2020` and `BizTalk Adapters for Enterprise Applications`
 
 > [!NOTE]
-> There is no seperate installation for BizTalk Adaper Pack (BAP). These are installed with BizTalk Server 2020 release onwards. 
+> Applicable starting `BizTalk Server 2020`, `BizTalk Adapter Pack (BAP)` is included in BizTalk Server installation and requires no separate installation 
 
 ## Supported LOB Systems
 
@@ -140,6 +140,6 @@ This article lists the Line-of-Business (LOB) and Enterprise systems supported b
 | 8.5 | Yes |
 
 > [!IMPORTANT]
-> BizTalk 2020 Onwards TIBCO Enterprise Message Service Adapter is only supported in 64 bit mode. Please configure Tibco Enterprise Message Service Adapter to use 64 bit host.
+> Applicable starting `BizTalk Server 2020`, `TIBCO Enterprise Message Service Adapter` is supported in 64 bit host only.
 
 
