@@ -50,7 +50,7 @@ The Office 365 Outlook Email Adapter allows you to send and receive mails from y
 
     |Use this|To do this|  
     | --- | --- |  
-    | **Attach&nbsp;BizTalk&nbsp;message&nbsp;parts** | If checked, BizTalk message non-body parts will be added as attachments to the email sent.|
+    | **Attach BizTalk message parts** | If checked, BizTalk message non-body parts will be added as attachments to the email sent.|
     | **Files** | Specifies that a file or files will be attached to the e-mail message and the full path to the file or files. The specified path or paths must be accessible to the host for the adapter at run time. Default value: empty. |
 
     After selecting some files, the attachments properties look similar to the following:
@@ -65,14 +65,14 @@ The Office 365 Outlook Email Adapter allows you to send and receive mails from y
 
     Property|Promoted property|
     |---|---|
-    | **To** | OfficeMail&#46;To |
-    | **CC** | OfficeMail&#46;CC |
+    | **To** | OfficeMail.To |
+    | **CC** | OfficeMail.CC |
     | **Subject** | OfficeMail.Subject |
     | **Importance** | OfficeMail.Importance |
-    | **Attached&nbsp;Files** | OfficeMail.AttachedFiles |
+    | **Attached Files** | OfficeMail.AttachedFiles |
 
 
-2. The *OfficeMail.AttachedFiles* property value is list of files with "|" as delimiter in between different files. For instance: "C:\\Attachments\File1.pdf|C:\\Attachments\File2.xml".
+2. The **OfficeMail.AttachedFiles** property value is list of files with "|" as delimiter in between different files. For instance: "C:\\Attachments\File1.pdf|C:\\Attachments\File2.xml".
 
 3. The ContentType property of the BizTalk message body part can be set to "Text" or "Html" to indicate the type of the email body. By default, it will be "Text".
 
@@ -121,9 +121,9 @@ You can use a simple File receive port and location to send messages to your Off
     |Use this|To do this|  
     |---|---|  
     | **Folder** | Select the folder to get email. The default folder is Inbox. Note that folders aren’t recursive in nature. For example, email from subfolders are not retrieved. |
-    | **Start&nbsp;from** | Enter how email is received from Office 365. This value indicates receivedTimeStamp of an email in Office 365 Outlook. Email more recent than the entered values are received.  |
-    | **Unread&nbsp;mails&nbsp;only** | Check this to read only unread email. Keep it unchecked to read all email. |
-    | **Post&nbsp;Action** | Select a post action to be performed after an email is read. **None** is the default, and does nothing after email is received by BizTalk. **Mark&nbsp;as&nbsp;read** implies, that after an email is received by BizTalk, the email in your mailbox is marked as read. **Delete** implies, that after an email is received by BizTalk, the email in your mailbox is deleted. Post actions are performed on a best-effort basis.|
+    | **Start from** | Enter how email is received from Office 365. This value indicates receivedTimeStamp of an email in Office 365 Outlook. Email more recent than the entered values are received.  |
+    | **Unread mails only** | Check this to read only unread email. Keep it unchecked to read all email. |
+    | **Post Action** | Select a post action to be performed after an email is read. **None** is the default, and does nothing after email is received by BizTalk. **Mark as read** implies, that after an email is received by BizTalk, the email in your mailbox is marked as read. **Delete** implies, that after an email is received by BizTalk, the email in your mailbox is deleted. Post actions are performed on a best-effort basis.|
 
     When finished, your properties look similar to the following:
 
@@ -133,9 +133,9 @@ You can use a simple File receive port and location to send messages to your Off
 
     |Use this|To do this|  
     |---|---|  
-    | **Deliver&nbsp;MIME** | Select this to save the MIME representation of an email. The MIME content will contain email body and all attachments.|
-    | **Process&nbsp;content** | Select this to save the email body. It is selected by default. The content type of the email body will be saved in the ContentType property of the created BizTalk message. |
-    | **Include&nbsp;attachments** | Check this to save email attachments as parts of the BizTalk message. It is unchecked by default. Each BizTalk message part has the ContentType property set to the MIME type of the attachment. Attachments that are Outlook items (emails, calendar events, contacts) are saved in their MIME representation.|
+    | **Deliver MIME** | Select this to save the MIME representation of an email. The MIME content will contain email body and all attachments.|
+    | **Process content** | Select this to save the email body. It is selected by default. The content type of the email body will be saved in the ContentType property of the created BizTalk message. |
+    | **Include attachments** | Check this to save email attachments as parts of the BizTalk message. It is unchecked by default. Each BizTalk message part has the ContentType property set to the MIME type of the attachment. Attachments that are Outlook items (emails, calendar events, contacts) are saved in their MIME representation.|
    
     When finished, your properties look similar to the following:
 
