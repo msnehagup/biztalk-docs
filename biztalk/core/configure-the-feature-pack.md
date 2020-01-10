@@ -90,14 +90,10 @@ Using deployment groups, you can deploy your applications to multiple BizTalk Se
 
 The Service Bus adapter supports Service Bus Premium, including sending messages to partitioned queues and topics. [Service Bus Premium and Standard messaging tiers](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-premium-messaging) details more about Service Bus Premium. 
 
-#### [Use named instances with Application Insights](../core/send-tracking-data-to-azure-application-insights-using-biztalk-server.md)
-When you enable Analytics, and enter the Application Insights key, you may get error: 
-
-```
-Group settings were not applied. (A database failure occurred due to database connectivity problems.)
-```
-
-This happens when you use SQL named instances. This is fixed in this feature pack; you can use SQL default instances, and SQL named instances. 
+#### [Send tracking data to Azure](../core/send-tracking-data-to-azure-application-insights-using-biztalk-server.md)
+Updates in Feature Pack 2:
+* Process and send tracking data to Azure Event Hubs
+* Application Insights supports SQL default instances, and SQL named instances
 
 #### TLS 1.2 support
 
@@ -116,7 +112,7 @@ Newtonsoft is a JSON framework for .NET. In this feature pack, support for versi
 
 ## Feature Pack 1 updates
 
-#### [Send tracking data to Application Insights](../core/send-tracking-data-to-azure-application-insights-using-biztalk-server.md)
+#### [Send tracking data to Azure](../core/send-tracking-data-to-azure-application-insights-using-biztalk-server.md)
 
 Send tracking data to Azure Application Insights to use its features, such as analytics, machine learning, diagnostics, and more. 
 

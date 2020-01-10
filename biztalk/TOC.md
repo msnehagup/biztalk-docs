@@ -378,7 +378,7 @@
 ### [Install](install-and-config-guides/install-biztalk-server-2016.md)
 ### [Upgrade](install-and-config-guides/upgrade-to-biztalk-server-2016.md)
 ### [Feature pack](core/configure-the-feature-pack.md)
-#### [Track data to Azure](core/send-tracking-data-to-azure-application-insights-using-biztalk-server.md)
+#### [Track data to Azure](core/send-tracking-data-to-azure.md)
 #### [Configure Operational Data Service](core/fp2016-configure-operational-data-service.md)
 #### [Configure management REST APIs](core/install-and-configure-the-management-rest-apis-in-biztalk-server.md)
 #### [Configure time zone and recurrence](core/configure-the-time-zone-and-recurrence-scheduling-in-biztalk-server.md)
