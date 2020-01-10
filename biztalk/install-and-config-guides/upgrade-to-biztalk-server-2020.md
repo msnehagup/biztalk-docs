@@ -63,7 +63,7 @@ The following table lists the supported Edition upgrade path from BizTalk Server
 | --- | --- | --- | --- | --- | --- |
 | Evaluation | No | No | No | No | Yes |
 | Branch | No | Yes | No | No | Yes |
-| Developer | No | No | Yes | No | Yes |
+| Developer | No | No | No | No | Yes |
 | Standard | No | No | No | Yes | Yes |
 | Enterprise | No | No | No | No | Yes |
 
@@ -95,7 +95,7 @@ The following table lists the supported Edition upgrade path from BizTalk Server
 
 - **Configuration Files**: Back up all custom configuration files in BizTalk Server 2016. BizTalk Server supports migration of changes only in the `btsntsvc.exe.config` and `bm.exe.config` files.
 
-- **SQL Adapter**: SQL Adapter has been announced deprecated since multiple past releases of BizTalk Server. This is now removed from BizTalk Server 2020 installation. Upgrade will change existing EDI batching related ports and ESBT exceptions port to WCF-SQL Adapter. If you are still using SQL Adapter for anything other than BizTalk out of box components, redesign them to use WCF-SQL adapter before starting upgrade.
+- **SQL Adapter**: SQL Adapter is **removed** from BizTalk Server 2020 installation. It is in deprecated state in BizTalk Server 2016 and versions prior to that.  BizTalk Server 2020 Upgrade will change ports associated with EDI batching or ESBT exceptions to use WCF-SQL Adapter. It is **user responsibility** to eliminate any other use of SQL Adapter in their BizTalk solution **prior to applying the BizTalk Server 2020 Upgrade**. 
 
 ### BAM
 
@@ -129,7 +129,7 @@ The following table lists the supported Edition upgrade path from BizTalk Server
      > [!NOTE]
      > Regenerated LiveData Workbooks do not recreate the Excel artifacts (for example, charts) in the original LiveData Workbook. Manually recreate the artifacts.
 
-- **BAM Tools pre-requisites**: SSIS installation is required on BAM Tools machine. Install equivalent version of SSIS as your SQL Server on machine where BAM Tools is configured. You can stop and disable SSIS windows service after installation of SSIS on this machine.
+- **BAM Tools pre-requisites**: SSIS installation is required on BAM Tools machine. Version of SSIS must be compatible to your SQL Server on machine where BAM Tools is configured. You can stop and disable SSIS windows service after installation of SSIS on this machine.
 
 ### Enterprise Single Sign-On (ESSO)
 
@@ -182,7 +182,7 @@ Using the Settings Dashboard, you can extensively tweak BizTalk Server settings 
 |   Install Visual C++ 2015-2019 Redist    |                                                                                                                                                                                                Install x86 and x64 versions of Visual C++ 2015-2019 Redistributable packages on all BizTalk machines.                                                                                                                                                                                                 |
 |          Upgrade SQL Server           |                                         Upgrade to a supported SQL Server version. See:<br/><br/>[Hardware and Software Requirements for BizTalk Server 2020](../install-and-config-guides/hardware-and-software-requirements-for-biztalk-server-2020.md)<br/>[Upgrade SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/upgrade-sql-server)                       |
 |    Upgrade SQL Server Client Tools    |                                                                                                                                                In a multicomputer environment, the Administration tools may be installed on a separate computer. Upgrade the SQL Server Administration Client Tools, including the Management Tools.                                                                                                                                                |
-|    Install SQL Server Integration Services    |                                                                                                                                                In a multicomputer environment, the BAM Tools may be installed and configured on a separate computer. Install equivalent version of SQL Server Integration Services as your target SQL Server version.                                                                                                                                                |
+|    Install SQL Server Integration Services    |                                                                                                                                                In a multicomputer environment, the BAM Tools may be installed and configured on a separate computer. Install version of SQL Server Integration Services compatible with as your target SQL Server.                                                                                                                                                |
 |    Create SSIS Catalog    |    Create SSIS Catalog (SSISDB)  on SQL Server                                                                                                                      |
 |         Install Visual Studio         |                         See [Hardware and Software Requirements for BizTalk Server 2020](../install-and-config-guides/hardware-and-software-requirements-for-biztalk-server-2020.md) for the supported versions. Different Visual Studio versions can be installed side-by-side. See [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio-versions-side-by-side).                         |
 |            Install Office             |                                     See [Install and use different versions of Office](https://support.office.com/article/Install-and-use-different-versions-of-Office-on-the-same-PC-6EBB44CE-18A3-43F9-A187-B78C513788BF) on the same computer. [Hardware and Software Requirements for BizTalk Server 2020](../install-and-config-guides/hardware-and-software-requirements-for-biztalk-server-2020.md) lists the supported Office versions.                                     |
@@ -200,12 +200,12 @@ Using the Settings Dashboard, you can extensively tweak BizTalk Server settings 
 
 ### Upgrade steps
 
-1. Close any open programs.
+1. Close all open programs.
 2. Run **Setup.exe** from the installation media.
 3. In Start, select **Install Microsoft BizTalk Server**.
 4. In **Customer Information**, enter your user name, organization, and product key. Select **Next**.
 5. Accept the license agreement, and select **Next**.
-6. In Customer Experience Improvement Program, enter you preference. See **Appendix A** (in this topic) for more information.
+6. In Customer Experience Improvement Program, enter your preference. See **Appendix A** (in this topic) for more information.
 7. In **Component Installation**, review the available components, and select **Next**.
 8. In **Summary**, review the upgradable components.
 9. Select **Upgrade** to start.
@@ -224,9 +224,9 @@ You cannot roll back to BizTalk Server 2016.
 
 - **Install BizTalk Server extension in Visual Studio**: To complete BizTalk Developer Tools installation, install BizTalk Server extension in Visual Studio.
 
-- **Download and copy WinSCP**: If your are use SFTP adapter, download recommended version of WinSCP zip file and extract it to BizTalk Server 2020 installation folder.
+- **Download and copy WinSCP**: If your are using SFTP adapter, download recommended version of WinSCP zip file and extract it to BizTalk Server 2020 installation folder.
 
-- **Uninstall OWC**: OWC is deprecated and not supported anymore by Microsoft. It is not recommended to leave it installed on BizTalk Server machines. Even if you use BAM Portal, uninstall OWC from the machine, BAM Portal will not show this component and remaining functionality of BAM Portal will continue to work.
+- **Uninstall OWC**: OWC is deprecated and not supported by Microsoft. It is recommended that you uninstalled it from BizTalk Server machines. Impact is limited to Aggregation Viewer capability in BAM Portal.
 
 - **Install MQSAgent**: If the MQSAgent.dll file is installed on a remote WebSphere MQ Server, install a new version of the MQ Agent from BizTalk Server 2020 on the remote WebSphere MQ Server.
 
@@ -245,7 +245,7 @@ You cannot roll back to BizTalk Server 2016.
 
 - **BizTalk Server 2016 Feature Pack**: If you upgraded from BizTalk Server 2016 Feature Pack, below post upgrade actions are required.
 
-    - **O365 Adapters**: If you use O365 adapters, install BizTalk TMS feature and configure TMS Service. Then open all ports using O365 Adapter and login to you Outlook account once for every port.
+    - **O365 Adapters**: Install and configure BizTalk TMS if you use O365 adapters. You will need to **activate** each port using these adapters by logging into your outlook account once for every port. 
 
     - **Management Service and Operational Data Service**: If you use Management Service or Operational Data Service, delete exising Management Service and Operational Data Service in IIS Manager, delete corresponding App Pools, and then re-configure BizTalk REST API feature in BizTalk Server 2020 configuration.
 
