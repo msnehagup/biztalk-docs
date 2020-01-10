@@ -37,8 +37,8 @@ This topic describes how to use the BizTalk Server Administration console to con
   
    |Use this|To do this|  
    |--------------|----------------|  
-   |**Time zone**| Please choose the appropriate Time zone, based on the time in choosen time zone all the values of date time are considered for scheduling. *Applicable starting BizTalk Server 2020 and BizTalk 2016 with Feature Pack 1 onwards.*|  
-   |**Automatically Adjust for Daylight Saving Time**| When checked, the schedule automatically adjusts to the daylight saving time of the time zone you choose. This option has no impact on the schedule if, either The specified time zone does not have a daylight saving time, or Daylight saving time is not observed in the time zone you choose.  *Applicable starting BizTalk Server 2020 and BizTalk 2016 with Feature Pack 1 onwards.*| 
+   |**Time zone**| *Applicable starting BizTalk Server 2020 and BizTalk 2016 with Feature Pack 1 onwards.* <br>Please choose the appropriate Time zone, based on the time in choosen time zone all the values of date time are considered for scheduling. |  
+   |**Automatically Adjust for Daylight Saving Time**| *Applicable starting BizTalk Server 2020 and BizTalk 2016 with Feature Pack 1 onwards.*<br> When checked, the schedule automatically adjusts to the daylight saving time of the time zone you choose. This option has no impact on the schedule if, either The specified time zone does not have a daylight saving time, or Daylight saving time is not observed in the time zone you choose. | 
    |**Start date**|Select this check box, and then from the pull-down calendar, select the date on which the receive location starts processing messages. To change the year, click the displayed year.|  
    |**Stop date**|Select this check box, and then from the pull-down calendar, select the date on which the receive location stops processing messages. This property is optional. If you do not specify a stop date, the receive location remains active until it is disabled.|  
    |**Enable service window**|Select this check box to configure the receive location to receive messages only at specified times of the day, then specify the times in the **Start time and Stop time** boxes. If the check box is cleared, the receive location receives messages at any time. The default value is false (cleared).|  
@@ -49,7 +49,7 @@ This topic describes how to use the BizTalk Server Administration console to con
 ## Enable recurrence schedule
 
 > [!NOTE]
-> R ecurrence schedule is applicable starting BizTalk Server 2020 and BizTalk 2016 with Feature Pack 1 onwards
+> Applicable starting BizTalk Server 2020 and BizTalk 2016 with Feature Pack 1 onwards
 
 1. In the **BizTalk Server Administration** console, right-click one of your receive locations, and select **Properties**.
 2. On the **Scheduling** page, select **Enable service window**. The **Start Time** and **Stop time** set the initial time the schedule is allowed to run:
