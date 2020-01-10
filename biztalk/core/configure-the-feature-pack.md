@@ -2,7 +2,7 @@
 title: "Configure the feature pack | Microsoft Docs"
 description: Install and configure feature pack 1, and feature pack 2. See the new features list, including API Management, team services deployment, new Azure adapters, backups, and more in BizTalk Server 2016 
 ms.custom: ""
-ms.date: "06/26/2018"
+ms.date: "01/10/2020"
 ms.prod: "biztalk-server"
 ms.reviewer: ""
 
@@ -114,11 +114,11 @@ Newtonsoft is a JSON framework for .NET. In this feature pack, support for versi
 
 Send tracking data to Application Insights to use its features, such as analytics, machine learning, diagnostics, and more. 
 
-#### [Operational Data Service](operational-data-service.md)
+#### [Configure the operational data feed using Power BI](../core/fp2016-configure-operational-data-service.md)
 
-Use OData visualization tools like PowerBI to query operational data. [Configure operational data service](fp2016-configure-operational-data-service.md) before you consume it.
+Use OData visualization tools like PowerBI to query operational data. For example, get a visual representation of your tracking data from your ports and orchestrations.
 
-#### [Connect to the management REST APIs in BizTalk](../core/install-and-configure-the-management-rest-apis-in-biztalk-server.md)
+#### [Connect to the management REST APIs in BizTalk](../core/fp2016-configure-management-rest-apis.md)
 
 Use REST APIs to remotely manage your BizTalk artifacts, including agreements, suspended instances, unenlisted orchestrations, and more.
 
@@ -128,9 +128,9 @@ Enable advanced scheduling in your receive locations. For example, set the timez
 
 #### [Configure automatic deployments with VSTS](../core/configure-automatic-deployment-with-visual-studio-team-services-in-biztalk.md)  
 
-Use Visual Studio Team Services (VSTS) to automatically deploy your solutions, or update existing applications. VSTS communicates with an agent installed on the [!INCLUDE[btsBizTalkServerNoVersion_md](../includes/btsbiztalkservernoversion-md.md)].
+Use Visual Studio Team Services (VSTS) to automatically deploy your solutions, or update existing applications. VSTS communicates with an agent installed on the BizTalk Server.
 
-#### [Connect to SQL Server Always Encrypted columns with BizTalk Server](../core/connect-to-sql-server-always-encrypted-columns-with-biztalk-server.md)  
+#### [Connect to SQL Server Always Encrypted columns with BizTalk Server](../adapters-and-accelerators/adapter-sql/key-features-in-biztalk-adapter-for-sql-server.md)  
 
 Use the WCF-SQL adapter to query encrypted columns from an Always Encrypted database in SQL Server.
 
