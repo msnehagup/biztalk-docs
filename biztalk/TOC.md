@@ -381,7 +381,6 @@
 #### [Track data to Azure](core/send-tracking-data-to-azure.md)
 #### [Configure operational data service](core/fp2016-configure-operational-data-service.md)
 #### [Configure management REST APIs](core/fp2016-configure-management-rest-apis.md)
-#### [Configure time zone and recurrence](core/configure-the-time-zone-and-recurrence-scheduling-in-biztalk-server.md)
 #### [Configure automatic deployment using VSTS](core/configure-automatic-deployment-with-visual-studio-team-services-in-biztalk.md)
 ##### [Step 1: Add Application project & update .json template](core/feature-pack-add-application-project.md)
 ##### [Step 2: Create the VSTS token & install the build agent](core/feature-pack-create-vsts-token.md)
