@@ -62,13 +62,15 @@ Maintaining a secure Microsoft [!INCLUDE[btsBizTalkServerNoVersion](../includes/
   > [!NOTE]
   >  If you want to allow a user who is a member of the BizTalk Server Operators group to monitor remote BizTalk servers, this user must also be a member of the local Administrators group on the remote computers.  
   
-- **BizTalk Server Read Only Users group**. A new BizTalk role that has been introduced **starting with BizTalk Server 2020**, that allows members to view Artifacts, service state, message flow and tracking information. This group does not have privileges to perform any type of administrative operations.  
+- **BizTalk Server Read Only Users group**. **Applicable starting BizTalk Server 2020**, members in group can view Artifacts, service state, message flow and tracking information. Members do not have privileges to perform any administrative operations.  
   
-   Below is the list of Operations a member of Read Only User Group can perform:   
+   Members of the BizTalk Server Read Only Users group can do the following:   
   
-  -	View all the User artifact information and Platform artifact such as Receive Port, Receive Location, Send Port, Orchestration, Maps, Policies, Pipelines, Host, Host Instances, Adapters etc. 
+  -	View user artifact information
+  
+  - View platform artifact such as Receive Port, Receive Location, Send Port, Orchestration, Maps, Policies, Pipelines, Host, Host Instances and Adapters 
 
-  - View Message Flow and Message events. It cannot view Message Context and Message content.
+  - View Message Flow and Message events. Cannot view Message Context and Message content.
 
   - View general service instances details and error information.
 
