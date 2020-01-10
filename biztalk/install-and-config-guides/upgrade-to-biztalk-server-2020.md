@@ -251,6 +251,9 @@ You cannot roll back to BizTalk Server 2016.
 
 - **Restart applications**: Restart all deployed applications that are upgraded.
 
+> [!IMPORTANT]
+> Applicable starting `BizTalk Server 2020`, `TIBCO Enterprise Message Service Adapter` is supported in 64 bit host only.
+
 ## Appendix A: Customer experience improvement Program
 As part of the Customer Experience Improvement Program in BizTalk Server, you can provide useful feedback to Microsoft regarding feature usage of BizTalk Server. The data collected is anonymous, and cannot be used to identify you. Microsoft collects feature usage statistics as part of this program.
 
