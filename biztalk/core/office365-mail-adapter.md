@@ -63,18 +63,22 @@ The Office 365 Outlook Email Adapter allows you to send and receive mails from y
 
 1. The default properties may also be updated using promoted properties:
 
-|Property|Promoted property|
-|---|---|
-| **To** | OfficeMail.To |
-| **CC** | OfficeMail.CC |
-| **Subject** | OfficeMail.Subject |
-| **Importance** | OfficeMail.Importance |
+    Property|Promoted property|
+    |---|---|
+    | **To** | OfficeMail&#46;To |
+    | **CC** | OfficeMail&#46;CC |
+    | **Subject** | OfficeMail.Subject |
+    | **Importance** | OfficeMail.Importance |
+    | **Attached&nbsp;Files** | OfficeMail.AttachedFiles |
 
-2. The ContentType property of the BizTalk message body part can be set to "Text" or "Html" to indicate the type of the email body. By default, it will be "Text".
 
-3. When parts of a multi-part BizTalk message are attached, the ContentType property of a part, if provided, is used as the MIME type for the attachment created. By default, the MIME type of the attachment is set to "application/octet-stream".
+2. The *OfficeMail.AttachedFiles* property value is list of files with "|" as delimiter in between different files. For instance: "C:\\Attachments\File1.pdf|C:\\Attachments\File2.xml".
 
-3. When attaching files, the MIME type of the attachment is determined from the filename extension. The default MIME type is "application/octet-stream".
+3. The ContentType property of the BizTalk message body part can be set to "Text" or "Html" to indicate the type of the email body. By default, it will be "Text".
+
+4. When parts of a multi-part BizTalk message are attached, the ContentType property of a part, if provided, is used as the MIME type for the attachment created. By default, the MIME type of the attachment is set to "application/octet-stream".
+
+5. When attaching files, the MIME type of the attachment is determined from the filename extension. The default MIME type is "application/octet-stream".
 
 ### Test your send port
 
