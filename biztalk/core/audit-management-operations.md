@@ -48,11 +48,11 @@ In fresh installation, auditing is disabled by default. To enable auditing:
 1. Ensure that BizTalk operational data service is configured.
 2. Open a browser and type  http://localhost/BizTalkOperationalDataService/AuditLogs .
 
-3. To fetch audit log entries between a date range use http://localhost/BizTalkOperationalDataService/AuditLogs?fromDate=2019-12-25T01:00:00&toDate=2020-01-10 . Supported date formats for filtering are : *yyyy-MM-dd* or *yyyy-MM-ddThh:mm:ss*
+3. To fetch audit log entries between a date range use http://localhost/BizTalkOperationalDataService/AuditLogs?fromDate=2019-12-25T01:00:00&toDate=2020-01-10 . Supported date formats for filtering are : *yyyy-MM-dd* or *yyyy-MM-ddThh:mm:ss* .
 
 ## Audit Log Structure
 
-When an artifact is created/updated, one or more audit log entries will be created. For example, when a send port is created,then 3 audit log entries are created; one for send port, one for primary transport and one for secondary transport. All these entries will have same **BatchId**. Audit log entries for primary and secondary transport can be correlated with send port using **ArtifactId** and **ParentArtifactId** values.
+When an artifact is created/updated, one or more audit log entries are created. For example, when a send port is created, then 3 audit log entries are created; one for send port, one for primary transport and one for secondary transport. All these entries will have same **BatchId**. Audit log entries for primary and secondary transport can be correlated with send port using **ArtifactId** and **ParentArtifactId** values.
 
 An audit log entry has following information:
 
@@ -62,14 +62,14 @@ An audit log entry has following information:
 - **Machine**: Machine name from which operation was performed, for example, `machine1@contoso.com`.
 - **ArtifactId**: Unique id of the artifact.
 - **ParentArtifactId**: Parent artifact id. If an artifact is child of another artifact, then ParentArtifactId of child artifact will have artifact id of the parent artifact.
-- **ArtifactType**: Type of artifact on which operation was performed for example `SendPort,ReceivePort, Application etc`.
-- **ArtifactName**: Name of the artifact, for example `FTP send port`.
+- **ArtifactType**: Type of artifact on which operation was performed, for example `SendPort,ReceivePort, Application etc`.
+- **ArtifactName**: Name of the artifact, for example, `FTP send port`.
 - **OperationName**: Action performed on the artifact, for example `Create`.
 
   Following table summarizes possible operations name on different artifacts:
 
    | Artifact type | Operation name|
-   | --- | --- | --- |
+   | --- | --- |
    | Ports | Create/Update/Delete |
    | Service Instances | Suspend/Resume/Terminate |
    | Application resources | Add/Update/Remove |
