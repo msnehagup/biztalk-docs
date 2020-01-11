@@ -3036,9 +3036,9 @@
           href: xslt-encoding-grid-property.md
         - name: XSLT transform engine (Grid Property)
           href: xslt-transform-engine-grid-property.md
-		  items:
-		  - name: Custom XSLT transform implementation
-		    href: xslt-custom-transform-implementation.md
+          items:
+          - name: Custom XSLT transform implementation
+            href: xslt-custom-transform-implementation.md
       - name: General Functoid Properties
         href: general-functoid-properties.md
         items:
