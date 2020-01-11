@@ -17,7 +17,7 @@ manager: "anneta"
 ---
 # Send BizTalk tracking data to Azure
 
-Leverage the power of Azure (Application Insights and Azure Event Hubs) to monitor your live BizTalk applications.
+Leverage the power of Azure (Application Insights and Azure Event Hubs) to monitor your BizTalk applications.
 
 ## Prerequisites
 
