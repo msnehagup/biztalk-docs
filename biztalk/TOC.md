@@ -2608,6 +2608,7 @@
 ####### [UninstallApp Command](core/uninstallapp-command.md)
 ####### [Change the Console Colors for BTSTask](core/how-to-edit-the-console-colors-for-btstask.md)
 #### [Restart services, shut down BizTalk Server](core/how-to-start-stop-pause-resume-or-restart-biztalk-server-services.md)
+#### [Audit Management Operations](core/azure-blob-adapter.md)
 ### [Track and performance counters](core/monitoring-biztalk-server.md)
 #### [Tracking Dependencies Between Artifacts in a BizTalk Server Application](core/tracking-dependencies-between-artifacts-in-a-biztalk-server-application.md)
 #### [Performance Counters](core/performance-counters.md)
