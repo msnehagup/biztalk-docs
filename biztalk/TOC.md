@@ -391,6 +391,7 @@
 ### [Upgrade](install-and-config-guides/upgrade-to-biztalk-server-2013-and-2013-r2.md)
 ## [Install a Multi-Computer scenario](install-and-config-guides/install-biztalk-server-in-a-multi-computer-environment.md)
 ## [Configure BizTalk](install-and-config-guides/configure-biztalk-server.md)
+### [Configure BizTalk](install-and-config-guides/gmsa-config.md)
 ## [Configure a cluster](install-and-config-guides/configure-biztalk-server-in-a-cluster.md)
 ## [Post-configuration steps](install-and-config-guides/post-configuration-steps-to-optimize-your-environment.md)
 ## [Import and Export Configuration](install-and-config-guides/import-and-export-biztalk-server-configuration.md)
