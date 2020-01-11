@@ -371,6 +371,7 @@
 ### [Prerequisites](install-and-config-guides/set-up-and-install-prerequisites-for-biztalk-server-2020.md)
 ### [Install](install-and-config-guides/install-biztalk-server-2020.md)
 ### [Upgrade](install-and-config-guides/upgrade-to-biztalk-server-2020.md)
+### [Supported LOB and enterprise systems](adapters-and-accelerators/lob-and-enterprise-2020-support.md)
 ## [BizTalk 2016](install-and-config-guides/biztalk-server-2016-what-s-new-and-installation.md)
 ### [What's New](install-and-config-guides/what-s-new-in-biztalk-server-2016.md)
 ### [Hardware and Software Requirements](install-and-config-guides/hardware-and-software-requirements-for-biztalk-server-2016.md)
