@@ -90,4 +90,4 @@ You can change who has access by manually updating the **web.config** file, whic
 
 [REST API reference](https://docs.microsoft.com/rest/api/biztalk/?view=rest-biztalk-2016)
 
-[What's new in Feature Pack](../core/configure-the-feature-pack.md)
+[What's new in Feature Pack](../install-and-config-guides/fp2016-what-s-new-and-installation.md)
