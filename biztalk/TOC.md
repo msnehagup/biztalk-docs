@@ -378,7 +378,7 @@
 ### [Prerequisites](install-and-config-guides/set-up-and-install-prerequisites-for-biztalk-server-2016.md)
 ### [Install](install-and-config-guides/install-biztalk-server-2016.md)
 ### [Upgrade](install-and-config-guides/upgrade-to-biztalk-server-2016.md)
-### [What's new in Feature pack](install-and-config-guides\fp2016-what-s-new-and-installation.md)
+### [What's new in Feature pack](install-and-config-guides/fp2016-what-s-new-and-installation.md)
 #### [Configure operational data service](install-and-config-guides/fp2016-configure-operational-data-service.md)
 #### [Configure management REST APIs](install-and-config-guides/fp2016-configure-management-rest-apis.md)
 ## [BizTalk 2013 R2 & 2013](install-and-config-guides/biztalk-server-2013-and-2013-r2-what-s-new-install-and-upgrade.md)
