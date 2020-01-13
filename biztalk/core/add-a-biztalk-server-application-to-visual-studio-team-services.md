@@ -56,4 +56,4 @@ This topics provides an overview, and lists the key steps to deploy your solutio
 11. Your application should automatically deploy to your [!INCLUDE[btsBizTalkServerNoVersion_md](../includes/btsbiztalkservernoversion-md.md)].
 
 ## See also
-[What's new in Feature Pack](../install-and-config-guides/fp2016-what-s-new-and-installation.md)
+[Configure the Feature Pack](../core/configure-the-feature-pack.md)

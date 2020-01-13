@@ -82,5 +82,5 @@ Operational data is information on the instances and messages flowing through yo
 
 [More about Operational Data Service](operational-data-service.md)
 
-[What's new in Feature Pack](../install-and-config-guides/fp2016-what-s-new-and-installation.md)
+[What's new in Feature Pack](../core/configure-the-feature-pack.md)
  

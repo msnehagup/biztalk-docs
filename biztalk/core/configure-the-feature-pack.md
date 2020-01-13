@@ -114,11 +114,11 @@ Newtonsoft is a JSON framework for .NET. In this feature pack, support for versi
 
 Send tracking data to Application Insights to use its features, such as analytics, machine learning, diagnostics, and more. 
 
-#### [Configure the operational data feed using Power BI](../install-and-config-guides/fp2016-configure-operational-data-service.md)
+#### [Configure the operational data feed using Power BI](../core/fp2016-configure-operational-data-service.md)
 
 Use OData visualization tools like PowerBI to query operational data. For example, get a visual representation of your tracking data from your ports and orchestrations.
 
-#### [Connect to the management REST APIs in BizTalk](../install-and-config-guides/fp2016-configure-management-rest-apis.md)
+#### [Connect to the management REST APIs in BizTalk](../core/fp2016-configure-management-rest-apis.md)
 
 Use REST APIs to remotely manage your BizTalk artifacts, including agreements, suspended instances, unenlisted orchestrations, and more.
 
