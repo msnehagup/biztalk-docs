@@ -4,13 +4,14 @@ TOCTitle: BizTalk Settings Dashboard, Group Page
 ms:assetid: 16e0ac35-49da-448c-b6d7-06e714d9e957
 ms:mtpsurl: https://msdn.microsoft.com/library/Ff629685(v=BTS.80)
 ms:contentKeyID: 51526432
-ms.date: 08/30/2017
+ms.date: 01/22/2020
+ms.custom: "biztalk-2020"
 mtps_version: v=BTS.80
 ---
 
 # BizTalk Settings Dashboard, Group Page
 
- 
+ 
 
 Use the **Group** tab to modify the configuration of group-level performance settings in BizTalk Server.
 
@@ -65,15 +66,21 @@ Use the **Group** tab to modify the configuration of group-level performance set
 <tbody>
 <tr class="even">
 <td><strong>Enable fault tolerance</strong></td>
-<td>New starting with BizTalk Server 2020.<br /><br />
-Select this option to enable receive location recover from fault. <br /><br /> Receive locations can recover from transient errors instead of completely disabled by BizTalk. On error, receive locations will be disabled in the host instance where it is faulted and BizTalk will attempt to recover it in certain configurable interval. The receive location will continue running in other host instances.</td>
+<td>Select this option to enable receive location recovery from faults. <br /><br /> Receive locations can recover from transient errors instead of being completely disabled by BizTalk. On error, receive locations will be disabled in the host instance where it is faulted and BizTalk will attempt to recover it in certain configurable interval. The receive location will continue running in other host instances.<br />
+<br />
+This setting applies to: 
+<ul><li>BizTalk Server 2020 and newer</li></ul>
+</td>
 <td>On, Off</td>
 <td>Off</td>
 </tr>
 <tr class="odd">
 <td><strong>Retry interval</strong></td>
-<td>New starting with BizTalk Server 2020.<br /><br />
-Set the interval in which BizTalk server attempts to recover receive location from failures..</td>
+<td>Set the interval in which BizTalk server attempts to recover receive location from failures.<br />
+<br />
+This setting applies to: 
+<ul><li>BizTalk Server 2020 and newer</li></ul>
+</td></td>
 <td>1 – 43200</td>
 <td>60</td>
 </tr>
@@ -110,28 +117,35 @@ Turning off global tracking disables the tracking interceptors for the entire Bi
 </tr>
 <tr class="odd">
 <td><strong>Allow import of tracking settings</strong></td>
-<td>New starting with BizTalk Server 2016.<br />
-<br />
-When you import an application, the tracking settings configured on artifacts within the application are also imported. This is how all previous BizTalk versions behave. When unchecked, the tracking settings are not imported. This is a global setting, so it applies to all applications you import, and will import in the future.<br />
+<td>When you import an application, the tracking settings configured on artifacts within the application are also imported. This is how all previous BizTalk versions behave. When unchecked, the tracking settings are not imported. This is a global setting, so it applies to all applications you import, and will import in the future.<br />
 <br />
 If you want to control what is specifically tracked in your environments, just as you have in previous BizTalk versions, then leave this setting enabled. If you want to disable tracking on all artifacts on all imported applications, then uncheck this setting.<br />
 <br />
 BTS task example:<br />
-<code>btstask importbindings -ImportTrackingSettings:false -Source:c:\temp\binding.xml</code></td>
+<code>btstask importbindings -ImportTrackingSettings:false -Source:c:\temp\binding.xml</code><br />
+<br />
+This setting applies to: 
+<ul><li>BizTalk Server 2016 and newer</li></ul>
+</td>
 <td>On, Off</td>
 <td>On</td>
 </tr>
 <tr class="even">
 <td><strong>Audit management Operations</strong></td>
-<td>New starting with BizTalk Server 2020.<br /><br />
-Select this option to enable audit of management operations.</td>
+<td>Select this option to enable audit of management operations.<br />
+<br />
+This setting applies to: 
+<ul><li>BizTalk Server 2020 and newer</li></ul>
+</td>
 <td>On, Off</td>
 <td>Off</td>
 </tr>
 <tr class="odd">
 <td><strong>Maximum number of audit entries</strong></td>
-<td>New starting with BizTalk Server 2020.<br /><br />
-Set the maximum number of audit logs to be retained in audit store. BizTalk will automatically delete oldest records when number of audit entries exceeds this number.
+<td>Set the maximum number of audit logs to be retained in audit store. BizTalk will automatically delete oldest records when number of audit entries exceeds this number.<br />
+<br />
+This setting applies to: 
+<ul><li>BizTalk Server 2020 and newer</li></ul>
 </td>
 <td>1 – Maximum value of type Integer</td>
 <td>10000</td>
@@ -152,24 +166,35 @@ Set the maximum number of audit logs to be retained in audit store. BizTalk will
 <tbody>
 <tr class="even">
 <td><strong>Enable group-level analytics</strong></td>
-<td>New starting with BizTalk Server 2016 feature pack.<br/><br/>
-Select this option to enable group level analytics which leverage the power of Azure (Application Insights and Azure Event Hubs) to monitor your BizTalk applications. <br/><br/>
-Turning off global analytics disables the analytics interceptors for the entire BizTalk Server group. This means, BizTalk Server will not collect analytics events.</td>
+<td>Select this option to enable group level analytics which leverage the power of Azure (Application Insights and Azure Event Hubs) to monitor your BizTalk applications. <br/><br/>
+Turning off global analytics disables the analytics interceptors for the entire BizTalk Server group. This means, BizTalk Server will not collect analytics events.<br />
+<br />
+This setting applies to: 
+<ul><li>BizTalk Server 2016 and newer</li>
+<li>BizTalk Server 2016 with Feature Pack 1 and newer</li></ul>
+</td>
 <td>On, Off</td>
 <td>Off</td>
 </tr>
 <tr class="odd">
 <td><strong>Target type</strong></td>
-<td>New starting with BizTalk Server 2016 feature pack.<br/><br/>
-Select the service in Azure(<strong>Application Insights</strong> or <strong>Azure Event Hubs</strong>) to which you wish to send analytics data.</td>
+<td>Select the service in Azure(<strong>Application Insights</strong> or <strong>Azure Event Hubs</strong>) to which you wish to send analytics data.<br />
+<br />
+This setting applies to: 
+<ul><li>BizTalk Server 2016 and newer</li>
+<li>BizTalk Server 2016 with Feature Pack 1 and newer</li></ul>
+</td>
 <td>-</td>
 <td>None selected</td>
 </tr>
 <tr class="even">
 <td><strong>Connection parameters</strong></td>
-<td>New starting with BizTalk Server 2016 feature pack.<br/><br/>
-Set connection parameter of the Azure service where monitoring data will be analyzed. <br />
-You can either manually enter the connection parameter or sign-in to azure and get connection details.
+<td>Set connection parameter of the Azure service where monitoring data will be analyzed. <br />
+You can either manually enter the connection parameter or sign-in to azure and get connection details.<br />
+<br />
+This setting applies to: 
+<ul><li>BizTalk Server 2016 and newer</li>
+<li>BizTalk Server 2016 with Feature Pack 1 and newer</li></ul>
 </td>
 <td>-</td>
 <td>Empty</td>
@@ -208,4 +233,3 @@ You can either manually enter the connection parameter or sign-in to azure and g
 
 [How to Modify Host Settings](https://msdn.microsoft.com/library/ff629679\(v=bts.80\))  
 [How to Modify Host Instance Settings](https://msdn.microsoft.com/library/ff629695\(v=bts.80\))
-
