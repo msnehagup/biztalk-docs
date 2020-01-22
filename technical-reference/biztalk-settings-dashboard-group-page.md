@@ -51,6 +51,34 @@ Use the **Group** tab to modify the configuration of group-level performance set
 </tbody>
 </table>
 
+**Receive Location**
+
+<table>
+<thead>
+<tr class="header">
+<th>Use this</th>
+<th>To do this</th>
+<th>Boundary values</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td><strong>Enable fault tolerance</strong></td>
+<td>New starting with BizTalk Server 2020.<br /><br />
+Select this option to enable receive location recover from fault. <br /><br /> Receive locations can recover from transient errors instead of completely disabled by BizTalk. On error, receive locations will be disabled in the host instance where it is faulted and BizTalk will attempt to recover it in certain configurable interval. The receive location will continue running in other host instances.</td>
+<td>On, Off</td>
+<td>Off</td>
+</tr>
+<tr class="odd">
+<td><strong>Retry interval</strong></td>
+<td>New starting with BizTalk Server 2020.<br /><br />
+Set the interval in which BizTalk server attempts to recover receive location from failures..</td>
+<td>1 – 43200</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
 
 **Tracking and Reporting**
 
@@ -69,7 +97,7 @@ Use the **Group** tab to modify the configuration of group-level performance set
 <td>Set the interval at which performance counters are refreshed.<br />
 <br />
 The interval trades off load on database versus up-to-dateness of counters. The higher value means less frequently updated data, and thus lesser load on the database.</td>
-<td>1 – 1 – Maximum value of type Integer</td>
+<td>1 – Maximum value of type Integer</td>
 <td>-</td>
 </tr>
 <tr class="even">
@@ -92,6 +120,59 @@ BTS task example:<br />
 <code>btstask importbindings -ImportTrackingSettings:false -Source:c:\temp\binding.xml</code></td>
 <td>On, Off</td>
 <td>On</td>
+</tr>
+<tr class="even">
+<td><strong>Audit management Operations</strong></td>
+<td>New starting with BizTalk Server 2020.<br /><br />
+Select this option to enable audit of management operations.</td>
+<td>On, Off</td>
+<td>Off</td>
+</tr>
+<tr class="odd">
+<td><strong>Maximum number of audit entries</strong></td>
+<td>New starting with BizTalk Server 2020.<br /><br />
+Set the maximum number of audit logs to be retained in audit store. BizTalk will automatically delete oldest records when number of audit entries exceeds this number.
+</td>
+<td>1 – Maximum value of type Integer</td>
+<td>10000</td>
+</tr>
+</table>
+
+**Analytics**
+
+<table>
+<thead>
+<tr class="header">
+<th>Use this</th>
+<th>To do this</th>
+<th>Boundary values</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td><strong>Enable group-level analytics</strong></td>
+<td>New starting with BizTalk Server 2016 feature pack.<br/><br/>
+Select this option to enable group level analytics which leverage the power of Azure (Application Insights and Azure Event Hubs) to monitor your BizTalk applications. <br/><br/>
+Turning off global analytics disables the analytics interceptors for the entire BizTalk Server group. This means, BizTalk Server will not collect analytics events.</td>
+<td>On, Off</td>
+<td>Off</td>
+</tr>
+<tr class="odd">
+<td><strong>Target type</strong></td>
+<td>New starting with BizTalk Server 2016 feature pack.<br/><br/>
+Select the service in Azure(<strong>Application Insights</strong> or <strong>Azure Event Hubs</strong>) to which you wish to send analytics data.</td>
+<td>-</td>
+<td>None selected</td>
+</tr>
+<tr class="even">
+<td><strong>Connection parameters</strong></td>
+<td>New starting with BizTalk Server 2016 feature pack.<br/><br/>
+Set connection parameter of the Azure service where monitoring data will be analyzed. <br />
+You can either manually enter the connection parameter or sign-in to azure and get connection details.
+</td>
+<td>-</td>
+<td>Empty</td>
 </tr>
 </tbody>
 </table>
