@@ -52,7 +52,12 @@ Use the **Group** tab to modify the configuration of group-level performance set
 </tbody>
 </table>
 
-**Receive Location** (New starting with BizTalk Server 2016)
+**Receive Location**
+> [!NOTE] 
+>
+> These settings are available starting:
+> * BizTalk Server 2020 and newer
+
 
 <table>
 <thead>
@@ -66,20 +71,14 @@ Use the **Group** tab to modify the configuration of group-level performance set
 <tbody>
 <tr class="even">
 <td><strong>Enable fault tolerance</strong></td>
-<td>Select this option to enable receive location recovery from faults. <br /><br /> Receive locations can recover from transient errors instead of being completely disabled by BizTalk. On error, receive locations will be disabled in the host instance where it is faulted and BizTalk will attempt to recover it in certain configurable interval. The receive location will continue running in other host instances.<br />
-<br />
-This setting applies to: 
-<ul><li>BizTalk Server 2020 and newer</li></ul>
+<td>Select this option to enable receive location recovery from faults. <br /><br /> Receive locations can recover from transient errors instead of being completely disabled by BizTalk. On error, receive locations will be disabled in the host instance where it is faulted and BizTalk will attempt to recover it in certain configurable interval. The receive location will continue running in other host instances.
 </td>
 <td>On, Off</td>
 <td>Off</td>
 </tr>
 <tr class="odd">
 <td><strong>Retry interval</strong></td>
-<td>Set the interval in which BizTalk server attempts to recover receive location from failures.<br />
-<br />
-This setting applies to: 
-<ul><li>BizTalk Server 2020 and newer</li></ul>
+<td>Set the interval in which BizTalk server attempts to recover receive location from failures.
 </td></td>
 <td>1 – 43200</td>
 <td>60</td>
@@ -152,7 +151,11 @@ This setting applies to:
 </tr>
 </table>
 
-**Analytics**(New starting with BizTalk Server 2016 with Feature Pack 1)
+**Analytics**
+> [!NOTE] 
+>
+> These settings are available starting:
+> * BizTalk Server 2016 with Feature Pack 1 and newer
 
 <table>
 <thead>
@@ -167,22 +170,14 @@ This setting applies to:
 <tr class="even">
 <td><strong>Enable group-level analytics</strong></td>
 <td>Select this option to enable group level analytics which leverage the power of Azure (Application Insights and Azure Event Hubs) to monitor your BizTalk applications. <br/><br/>
-Turning off global analytics disables the analytics interceptors for the entire BizTalk Server group. This means, BizTalk Server will not collect analytics events.<br />
-<br />
-This setting applies to: 
-<ul><li>BizTalk Server 2016 and newer</li>
-<li>BizTalk Server 2016 with Feature Pack 1 and newer</li></ul>
+Turning off global analytics disables the analytics interceptors for the entire BizTalk Server group. This means, BizTalk Server will not collect analytics events.
 </td>
 <td>On, Off</td>
 <td>Off</td>
 </tr>
 <tr class="odd">
 <td><strong>Target type</strong></td>
-<td>Select the service in Azure(<strong>Application Insights</strong> or <strong>Azure Event Hubs</strong>) to which you wish to send analytics data.<br />
-<br />
-This setting applies to: 
-<ul><li>BizTalk Server 2016 and newer</li>
-<li>BizTalk Server 2016 with Feature Pack 1 and newer</li></ul>
+<td>Select the service in Azure(<strong>Application Insights</strong> or <strong>Azure Event Hubs</strong>) to which you wish to send analytics data.
 </td>
 <td>-</td>
 <td>None selected</td>
@@ -190,11 +185,7 @@ This setting applies to:
 <tr class="even">
 <td><strong>Connection parameters</strong></td>
 <td>Set connection parameters of the Azure service where monitoring data will be analyzed. <br />
-You can either manually enter the connection parameters or sign-in to azure and get connection details.<br />
-<br />
-This setting applies to: 
-<ul><li>BizTalk Server 2016 and newer</li>
-<li>BizTalk Server 2016 with Feature Pack 1 and newer</li></ul>
+You can either manually enter the connection parameters or sign-in to azure and get connection details.
 </td>
 <td>-</td>
 <td>Empty</td>
