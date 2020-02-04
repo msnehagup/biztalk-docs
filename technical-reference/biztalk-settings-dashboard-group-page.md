@@ -4,8 +4,8 @@ TOCTitle: BizTalk Settings Dashboard, Group Page
 ms:assetid: 16e0ac35-49da-448c-b6d7-06e714d9e957
 ms:mtpsurl: https://msdn.microsoft.com/library/Ff629685(v=BTS.80)
 ms:contentKeyID: 51526432
-ms.date: 01/22/2020
 ms.custom: "biztalk-2020"
+ms.date: 01/22/2020
 mtps_version: v=BTS.80
 ---
 
@@ -52,7 +52,7 @@ Use the **Group** tab to modify the configuration of group-level performance set
 </tbody>
 </table>
 
-**Receive Location**
+**Receive Location** (New starting with BizTalk Server 2016)
 
 <table>
 <thead>
@@ -152,7 +152,7 @@ This setting applies to:
 </tr>
 </table>
 
-**Analytics**
+**Analytics**(New starting with BizTalk Server 2016 with Feature Pack 1)
 
 <table>
 <thead>
@@ -189,8 +189,8 @@ This setting applies to:
 </tr>
 <tr class="even">
 <td><strong>Connection parameters</strong></td>
-<td>Set connection parameter of the Azure service where monitoring data will be analyzed. <br />
-You can either manually enter the connection parameter or sign-in to azure and get connection details.<br />
+<td>Set connection parameters of the Azure service where monitoring data will be analyzed. <br />
+You can either manually enter the connection parameters or sign-in to azure and get connection details.<br />
 <br />
 This setting applies to: 
 <ul><li>BizTalk Server 2016 and newer</li>
