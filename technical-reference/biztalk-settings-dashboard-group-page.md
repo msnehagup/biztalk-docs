@@ -71,7 +71,7 @@ Use the **Group** tab to modify the configuration of group-level performance set
 <tbody>
 <tr class="even">
 <td><strong>Enable fault tolerance</strong></td>
-<td>Select this option to enable receive location recovery from faults. <br /><br /> Receive locations can recover from transient errors instead of being completely disabled by BizTalk. On error, receive locations will be disabled in the host instance where it is faulted and BizTalk will attempt to recover it in certain configurable interval. The receive location will continue running in other host instances.
+<td>Select this option to allow receive locations to recover from transient errors instead of getting completely disabled. On error, receive locations will be disabled in the host instance where it is faulted and BizTalk will attempt to recover it in certain configurable interval. The receive location will continue running in other host instances.
 </td>
 <td>On, Off</td>
 <td>Off</td>
