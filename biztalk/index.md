@@ -7,7 +7,7 @@ services: biztalk-service
 documentationcenter: ''
 caps.latest.revision: 31
 author: MandiOhlinger
-manager: anneta
+manager: dougeby
 editor: ''
 ms.assetid:
 ms.prod: biztalk-server
@@ -15,7 +15,7 @@ ms.workload: integration
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: hub-page
-ms.date: 06/19/2017
+ms.date: 01/27/2020
 ms.author: mandia
 ---
 
@@ -91,7 +91,7 @@ ms.author: mandia
                         <a href="#getstart">Get Started</a>
                         <ul id="getstart" class="cardsC">
                             <li>
-                                <a href="/biztalk/install-and-config-guides/what-s-new-in-biztalk-server-2016">
+                                <a href="/biztalk/install-and-config-guides/whats-new-in-biztalk-server-2020">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -343,20 +343,20 @@ ms.author: mandia
                         <a href="#annc">Announcements &amp; social media</a>
                         <ul id="annc" class="cardsC">
                             <li>
-                                <a href="https://www.biztalk360.com/integrate-2017-usa/">
+                                <a href="https://www.biztalk360.com/integrate-2020/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="https://docs.microsoft.com/media/hubs/biztalk/biztalk-get-started-announcements-integrate-2017.svg" alt="" />
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Integrate 2017 - Redmond</h3>
-                                                    <p>The integration love is coming to Redmond. Come and see how Microsoft
-                                                        and the integration community is changing the world, one workflow
-                                                        at a time.</p>
+                                                    <h3>Integrate 2020</h3>
+                                                    <p>The integration love continues. Come and see how Microsoft
+                                                    and the integration community is changing the world, one workflow
+                                                    at a time.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -376,8 +376,26 @@ ms.author: mandia
                                                 <div class="cardText">
                                                     <h3>BizTalk magazine on Flipboard</h3>
                                                     <p>A great collection of BizTalk and integration resources that focus on
-                                                        on-premises and cloud. Read topics from experts in the community,
-                                                        and with Microsoft</p>
+                                                    on-premises and cloud. Read topics from experts in the community, and with Microsoft.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.integrationbootcamp.com/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/dynamics-training.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Global Integration Bootcamp</h3>
+                                                    <p>Get hands-on learning and experience from your fellow integrators.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -496,7 +514,7 @@ ms.author: mandia
                                                     </div>
                                                     <div class="cardText">
                                                         <h3>&#64;MicrosoftFlow</h3>
-                                                        <p>The official handle for Microsoft Flow.</p>
+                                                        <p>The official handle for Microsoft Power Automate.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -617,26 +635,6 @@ ms.author: mandia
                                 </a>
                             </li>
                             <li>
-                                <a href="https://code.msdn.microsoft.com/site/search?query=biztalk">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="https://docs.microsoft.com/media/hubs/biztalk/biztalk-developer-code-samples.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Code samples</h3>
-                                                    <p>Mapper extensions, orchestrations, hybrid implementations, encryption,
-                                                        decryption, adapters, and so much more.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="https://archive.codeplex.com/?s=biztalk">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -688,7 +686,7 @@ ms.author: mandia
                         <a href="#host-all"></a>
                         <ul id="host-all" class="cardsC">
                             <li>
-                                <a href="https://msdn.microsoft.com/library/mt670807.aspx">
+                                <a href="https://docs.microsoft.com/host-integration-server/install-and-config-guides/what-s-new-in-his-2016">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -707,7 +705,7 @@ ms.author: mandia
                                 </a>
                             </li>
                             <li>
-                                <a href="https://msdn.microsoft.com/library/mt736402(BTS.80).aspx">
+                                <a href="https://docs.microsoft.com/host-integration-server/install-and-config-guides/installing-his-2016">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -726,7 +724,7 @@ ms.author: mandia
                                 </a>
                             </li>
                             <li>
-                                <a href="https://msdn.microsoft.com/library/dn148340.aspx">
+                                <a href="https://docs.microsoft.com/host-integration-server/core/host-integration-server-core-documentation">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -745,7 +743,7 @@ ms.author: mandia
                                 </a>
                             </li>
                             <li>
-                                <a href="https://msdn.microsoft.com/library/dn745875(v=sql.120).aspx">
+                                <a href="https://docs.microsoft.com/host-integration-server/db2oledbv/microsoft-ole-db-provider-for-db2">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
