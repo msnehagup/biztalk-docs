@@ -4,7 +4,7 @@ description: How to Enable Receive Location Fault Tolerance.
 author: "Pravakar Garnayak"
 ms.author: "pravagar"
 manager: "dougeby"
-ms.date: "02/10/2020"
+ms.date: "02/13/2020"
 ms.topic: conceptual
 ms.prod: biztalk-server
 
