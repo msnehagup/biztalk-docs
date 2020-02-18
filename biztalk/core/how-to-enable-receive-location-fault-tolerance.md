@@ -4,7 +4,7 @@ description: Enable fault tolerance on receive locations to keep processing mess
 author: "pravagar"
 ms.author: "pravagar"
 manager: "dougeby"
-ms.date: "02/14/2020"
+ms.date: "02/18/2020"
 ms.topic: conceptual
 ms.prod: biztalk-server
 
@@ -25,11 +25,9 @@ ms.custom: "biztalk-2020"
 
 To make your environment highly available (HA), you can create two or more host instances for each receiving host. In a HA environment, receive workloads are distributed between different host instances.
 
-You can use a Network Load Balancer (NLB), to distribute the receiving workload for the HTTP adapter. If a receive adapter has an error in one host instance, then it may completely disable the receive location. Other host instances running the receive adapter stop processing incoming workloads.
+For example, you create three host instances (A, B anc C) to run your HTTP receive location. You also use a Network Load Balancer (NLB) to distribute the receiving workload across these host instances. If the HTTP receive adapter fails in host instance A, such as a disk full error, it can completely disable the receive location. Host instances B and C also stop receiving messages, even though these host instances don't have any issues.
 
-For example, you create three host instances to run the HTTP receive adapter: A, B, and C. If the HTTP receive adapter fails in host instance A, such as a disk full error, it can completely disable the receive location. Host instance B and C also stop receiving messages, even though these hosts don't have any issues.
-
-**Starting with BizTalk Server 2020 and newer**, you can configure receive locations to recover from transient errors, instead of getting disabled. On error, receive locations are disabled in the host instance. BizTalk attempts to recover the receive location in an interval you set. The receive location continues running in the other host instances.
+**Starting with BizTalk Server 2020 and newer**, you can configure receive locations to recover from transient errors, instead of getting disabled. On error, receive locations are disabled in the specific host instance. BizTalk attempts to recover the receive location in an interval you set. The receive location continues running in the other host instances.
 
 ## Turn on fault tolerance
 
