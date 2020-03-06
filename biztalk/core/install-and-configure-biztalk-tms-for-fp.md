@@ -39,7 +39,8 @@ BizTalk Server TMS is a service that refreshes the Office 365 OAuth tokens used 
 2. In `\Program Files (x86)\Microsoft BizTalk Server 2016`, run BizTalkTMS.msi.
 3. Enter the username and password of a user that's a member of the SSO Administrators group.
 
-![BizTalk Server TMS setup](../core/media/BizTalk-TMS.png)
+> [!div class="mx-imgBorder"]
+> ![BizTalk Server TMS setup](../core/media/BizTalk-TMS.png)
 
 ## See also
 

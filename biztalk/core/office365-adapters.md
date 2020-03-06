@@ -37,11 +37,13 @@ BizTalk TMS is a service that refreshes the Office 365 OAuth tokens used by BizT
 
 When you're creating a [send port](../core/how-to-create-a-send-port2.md) or [receive location](../core/how-to-create-a-receive-location.md) in BizTalk Administration and choose any of the Office 365 adapters, you need to **Sign-in...** to your Office 365 account:
 
-![Office 365 Sign in](../core/media/office365-signin.png)
+> [!div class="mx-imgBorder"]
+> ![Office 365 Sign in](../core/media/office365-signin.png)
 
 You enter the Office 365 credentials, and confirm permissions. These credentials authorize BizTalk to connect to, and access the Office 365 account. In the following example, you see the permissions for Office 365 Outlook Calendar:
 
-![Office 365 Calendar permissions](../core/media/office365-calendar-permissions.png)
+> [!div class="mx-imgBorder"]
+> ![Office 365 Calendar permissions](../core/media/office365-calendar-permissions.png)
 
 ## Next steps
 
