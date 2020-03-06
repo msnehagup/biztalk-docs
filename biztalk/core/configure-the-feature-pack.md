@@ -33,7 +33,7 @@ BizTalk Server uses feature packs to provide improvements, features, and closer 
 
 The feature packs are cumulative. So when you install feature pack 3, you also get the features and updates in feature packs 2 and 1. You also get the latest cumulative updates.
 
-- Download the BizTalk Server 2016 [Feature Pack 3 CU7](https://aka.ms/bts2016update3).
+- Download the BizTalk Server 2016 [Feature Pack 3 CU7](https://aka.ms/bts2016fp3).
 
 #### Install
 
