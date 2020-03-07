@@ -31,7 +31,7 @@ Use the Office 365 Outlook adapters in BizTalk to send and receive messages betw
 
 ## TMS overview
 
-BizTalk TMS is a service that refreshes the Office 365 OAuth tokens used by BizTalk. It refreshes these tokens periodically, ensuring that the tokens always remain valid.
+BizTalk TMS is a service that manages the Office 365 OAuth tokens used by BizTalk. It refreshes these tokens periodically, ensuring that the tokens always remain valid.
 
 ## Sign-in to Office 365
 

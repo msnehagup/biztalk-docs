@@ -27,7 +27,7 @@ manager: "dougeby"
 
 ### TMS overview
 
-BizTalk Server TMS is a service that refreshes the Office 365 OAuth tokens used by BizTalk. It refreshes these tokens periodically, ensuring that the tokens always remain valid. It has a dependency on Enterprise Single Sign On service (ENT SSO), and must be installed on a computer that hosts the master secret server.
+BizTalk Server TMS is a service that manages the Office 365 OAuth tokens used by BizTalk. It refreshes these tokens periodically, ensuring that the tokens always remain valid. It has a dependency on Enterprise Single Sign On service (ENT SSO), and must be installed on a computer that hosts the master secret server.
 
 ## Prerequisites
 
